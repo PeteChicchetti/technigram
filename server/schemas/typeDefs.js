@@ -5,6 +5,20 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
+    posts: [Post]
+  }
+
+  type Post {
+    _id: ID!
+    title: String!
+    content: String!
+    user: User
+  }
+
+  type Reaction {
+    _id: ID!
+    comment: String!
+    user: User
   }
 
   type Auth {
