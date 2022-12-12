@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# MERN w/ GraphQL Boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MERN stack boiler plate with Sign Up / Login / Logout functionality using GraphQL, Apollo Server, and Apollo Client. Can Sign Up / Login and be taken to a Dashboard where user can logout using functionality set up in client/utils/auth.js. No styling, just basic Sign Up / Login / Logout functionality. Also uses React Router.
 
-## Available Scripts
+## Instructions:
 
-In the project directory, you can run:
+Follow along below to install the latest dependencies, or ``` npm install ``` in the root directory for the versions included in the current package.json files.
 
-### `npm start`
+### Client Folder:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- delete the package-lock.json
+- in the package.json, delete all dependencies
+- navigate to the client folder
+- run the following command:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+  npm install @apollo/client graphql jwt-decode react react-dom react-router-dom react-scripts web-vitals @testing-library/jest-dom @testing-library/react @testing-library/user-event
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- while in the client folder, run ```npm start``` to make sure there are no errors
 
-### `npm run build`
+### Server Folder: 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- delete the package-lock.json
+- in the package.json, delete all dependencies
+- navigate to the server folder
+- run the following command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm install apollo-server-express bcrypt express graphql jsonwebtoken mongoose dotenv
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+- in the connection.js (server/config/connection.js) make sure to change the name of the database to the name of your corresponding database
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- navigate to server folder, run ```npm start``` to make sure there are no errors
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Root Directory: 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- install concurrently as a dev dependency:
 
-## Learn More
+```
+npm i concurrently -D
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Side Notes:
 
-### Code Splitting
+- you'll eventually want to change the favicon.ico in the client/public folder (this is the icon shown on the tab of the browser)
+- you'll want to change the title in the client/public/index.html from "MERN" to the name of your application
+- you'll also want to change the "name" in the root package.json from "mern-boiler" to the name of your application
+- if you are having issues access the Apollo Sandbox, inside server/server.js line 25, remove the "*" after the "/" - from ``` app.get('/*') ``` to ``` app.get('/') ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Final Check:
+ - in the root directory, run `npm run develop`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Video Demonstration:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Video Link](https://watch.screencastify.com/v/C5vZrOS3Hq7FGSvvaRPB)
+ 
