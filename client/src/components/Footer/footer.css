@@ -10,4 +10,14 @@
 
 .footer-text a {
     color: #15cdfc;
+    text-decoration: none;
+}
+
+.github {
+    color: white;
+    text-decoration: none;
+}
+
+.github:hover {
+    color: #15cdfc;
 }
