@@ -22,6 +22,7 @@ import Navbar from './components/Navbar';
 import ProtectRoute from './components/ProtectRoute';
 
 import './App.css';
+import './components/Navbar/navbar.css';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
