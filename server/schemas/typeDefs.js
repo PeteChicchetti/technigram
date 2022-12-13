@@ -13,6 +13,7 @@ const typeDefs = gql`
     _id: ID!
     title: String!
     content: String!
+    createdAt: String!
     user: User
     reactions: [Reaction]
   }
@@ -20,6 +21,7 @@ const typeDefs = gql`
   type Reaction {
     _id: ID!
     comment: String!
+    createdAt: String!
     user: User
   }
 
@@ -30,8 +32,8 @@ const typeDefs = gql`
 
   type Query {
     user(userId: ID!): User
-    posts: [Post]
-    post(id: ID!): Post
+    posts: [Post]!
+    post(postid: ID!): Post
   }
 
   type Mutation {
