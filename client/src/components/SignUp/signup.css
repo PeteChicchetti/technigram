@@ -11,12 +11,13 @@
     font-family: sans-serif;
     background: var(--bg);
   }
-  
+
  .signupCard{
     text-align: center;
-    width: 75%;
+    width: 35%;
     height: 75%;
     border-color: var(--primary);
+    
   }
   
 
