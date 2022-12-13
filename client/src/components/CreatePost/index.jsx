@@ -1,6 +1,6 @@
 import React from 'react';
 
-class PhotoUpload extends React.Component {
+class CreatePost extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,10 +32,10 @@ class PhotoUpload extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <input type="file" onChange={this.handleFileChange} />
         <input type="text" value={this.state.caption} onChange={this.handleCaptionChange} placeholder="Enter a caption" />
-        <button type="submit">Upload Photo</button>
+        <button type="submit">Post</button>
       </form>
     );
   }
 }
 
-export default PhotoUpload
+export default CreatePost
