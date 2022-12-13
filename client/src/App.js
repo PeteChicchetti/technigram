@@ -17,7 +17,8 @@ import Login from './components/Login/index';
 import Dashboard from './pages/Dashboard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
+import Builds from './components/Builds/index';
+import CreatePost from './components/CreatePost/index';
 
 /// IMPORT COMPONENTS ///
 import ProtectRoute from './components/ProtectRoute';
@@ -67,6 +68,8 @@ function App() {
             path='dashboard/:userId'
             element={Auth.loggedIn() ? <Dashboard /> : <ProtectRoute />}
           />
+          <Route path='/builds' element={<Builds />}/>
+          <Route path='/createpost' element={<CreatePost />}/>
         </Routes>
         <Footer />
       </Router>
