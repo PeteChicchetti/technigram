@@ -10,6 +10,7 @@
     font-weight: 400;
     font-family: sans-serif;
     background: var(--bg);
+    display: grid;
   }
 
  .signupCard{
@@ -17,10 +18,12 @@
     width: 35%;
     height: 75%;
     border-color: var(--primary);
-    
+    margin: auto;
   }
   
-
+  .btn {
+    margin-top: 20px;
+}
   
  
   
