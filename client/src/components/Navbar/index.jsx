@@ -17,13 +17,13 @@ const Navbar = ({ toggle }) => {
     <>
         <Nav>
           <NavbarContainer>
-            <NavLogo to="/">Logo</NavLogo>
+            <NavLogo to="/">Technigram</NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
             <NavMenu>
               <NavItem>
-                <NavLinks to="/news">News</NavLinks>
+                <NavLinks to="/news" activeStyle>News</NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="/builds">Builds</NavLinks>

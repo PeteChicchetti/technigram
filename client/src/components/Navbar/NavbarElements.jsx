@@ -43,6 +43,8 @@ export const NavLogo = styled(LinkR)`
 
 export const MobileIcon = styled.div`
     display: none;
+    width: 28px;
+    height: 28px;
 
     @media screen and (max-width: 768px) {
         display: block;
@@ -62,6 +64,7 @@ export const NavMenu = styled.ul`
     list-style: none;
     text-align: center;
     margin-right: -22px;
+    margin-bottom: 0px;
 
     @media screen and (max-width: 768px) {
         display: none;
@@ -97,7 +100,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkR)`
     border-radius: 50px;
-    background: #01bf71;
+    background: #15cdfc;
     white-space: nowrap;
     padding: 10px 22px;
     color: #010606;
