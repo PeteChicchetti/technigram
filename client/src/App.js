@@ -7,6 +7,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import Auth from './utils/auth';
 
@@ -23,7 +24,11 @@ import Footer from './components/Footer';
 import ProtectRoute from './components/ProtectRoute';
 
 import './App.css';
+
+import './components/SignUp/signup.css';
+import './components/Login/login.css'
 import './components/Navbar/navbar.css';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',

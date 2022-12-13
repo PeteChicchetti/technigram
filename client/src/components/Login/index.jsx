@@ -41,28 +41,37 @@ const Login = (props) => {
   };
 
   return (
-    <main>
+    <main className='loginCard'>
       {data ? (
         <p>Successfully logged in! You may now head{' '}<Link to='/'>back to the homepage.</Link></p>
       ) : (
         <div>
-          <h2>Login</h2>
           <form onSubmit={handleFormSubmit}>
+          <h2>Login</h2>
+          <div className='form-group'>
+            <h3>Email</h3>
             <input
+              className='form-control'
               placeholder='Your email'
               name='email'
               type='email'
               value={formState.email}
               onChange={handleChange}
             />
+          </div>
+
+          <div className='form-group'>
+            <h3>Password</h3>
             <input
+              className='form-control'
               placeholder='Your password'
               name='password'
               type='password'
               value={formState.password}
               onChange={handleChange}
             />
-            <button type='submit'>Login</button>
+          </div>
+            <button type='submit' className='btn btn-dark btn-lg btn-block'>Login</button>
           </form>
         </div>
       )}
