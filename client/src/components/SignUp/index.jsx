@@ -62,7 +62,7 @@ const Signup = () => {
             />
             </div>
 
-            <div>
+            <div className='form-group'>
             <h3>Enter Email</h3>
             <input
               className='form-control'
@@ -74,7 +74,7 @@ const Signup = () => {
             />
             </div>
 
-            <div>
+            <div className='form-group'>
             <h3>Enter Password</h3>
             <input
               className='form-control'

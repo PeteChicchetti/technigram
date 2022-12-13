@@ -41,7 +41,7 @@ const Login = (props) => {
   };
 
   return (
-    <main>
+    <main className='loginCard'>
       {data ? (
         <p>Successfully logged in! You may now head{' '}<Link to='/'>back to the homepage.</Link></p>
       ) : (
