@@ -15,6 +15,7 @@ import Landing from './pages/Landing';
 import Signup from './components/SignUp/index';
 import Login from './components/Login/index';
 import Dashboard from './pages/Dashboard';
+import Navbar from './components/Navbar';
 
 
 /// IMPORT COMPONENTS ///
@@ -47,6 +48,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+        <Navbar />
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/signup' element={<Signup />} />
