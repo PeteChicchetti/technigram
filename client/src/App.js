@@ -12,9 +12,10 @@ import Auth from './utils/auth';
 
 /// IMPORT PAGES ///
 import Landing from './pages/Landing';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
+import Signup from './components/SignUp/index';
+import Login from './components/Login/index';
 import Dashboard from './pages/Dashboard';
+
 
 /// IMPORT COMPONENTS ///
 import ProtectRoute from './components/ProtectRoute';
