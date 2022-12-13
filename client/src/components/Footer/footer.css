@@ -1,8 +1,13 @@
 .footer {
-    background-color: darkgray;
+    background-color: black;
 }
 
-.footer-text {
-    font-size: 14px;
+.footer-text h3 {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
 
+.footer-text a {
+    color: #15cdfc;
 }
