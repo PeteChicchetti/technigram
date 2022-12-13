@@ -41,6 +41,7 @@ export const MobileDropdown = styled.ul`
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 80px);
     text-align: center;
+    padding: 0;
 
     @media screen and (mad-width 480px) {
         grid-template-rows: repeat(6, 60px);
@@ -60,7 +61,7 @@ export const MobileLink = styled(LinkS)`
     cursor: pointer;
 
     &:hover {
-        color: #01bf71;
+        color: #15cdfc;
         transition: 0.2s ease-in-out;
     }
 `;
@@ -72,7 +73,7 @@ export const MobileBtnWrapper = styled.div`
 
 export const MobileRoute = styled(LinkR)`
     border-radius: 50px;
-    background: #01bf71;
+    background: #15cdfc;
     white-space: nowrap;
     padding: 16px 64px;
     color: #010606;
