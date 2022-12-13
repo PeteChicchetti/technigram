@@ -1,6 +1,39 @@
 
-
-main {
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    font-weight: 400;
+    font-family: sans-serif;
     background: var(--bg);
-    
-}
+  }
+  
+ .signupCard{
+    text-align: center;
+    width: 75%;
+    height: 75%;
+    border-color: var(--primary);
+  }
+  
+
+  
+ 
+  
+  
+  
+
+  
+ 
+  
+  
+  
+
+  
+
+  
+  
+ 

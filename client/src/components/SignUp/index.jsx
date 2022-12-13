@@ -43,7 +43,7 @@ const Signup = () => {
   };
 
   return (
-    <main>
+    <main className='signupCard'>
       {data ? (
         <p variant='subtitle1'>Successfully created an account. You may now head{' '}<Link to='/'>back to the hompage.</Link></p>
       ) : (
@@ -51,6 +51,7 @@ const Signup = () => {
           <form onSubmit={handleFormSubmit}>
           <h2>Sign Up</h2>
             <div className="form-group">
+            <h3>Enter Username</h3>
             <input
               className='form-control'
               placeholder='Username'
@@ -62,6 +63,7 @@ const Signup = () => {
             </div>
 
             <div>
+            <h3>Enter Email</h3>
             <input
               className='form-control'
               placeholder='Email'
@@ -73,6 +75,7 @@ const Signup = () => {
             </div>
 
             <div>
+            <h3>Enter Password</h3>
             <input
               className='form-control'
               placeholder='Password'
@@ -82,7 +85,7 @@ const Signup = () => {
               onChange={handleChange}
             />
             </div>
-            <button type='submit'>Sign Up</button>
+            <button type='submit' className='btn btn-dark btn-lg btn-block'>Sign Up</button>
           </form>
         </div>
       )}
@@ -96,3 +99,4 @@ const Signup = () => {
 };
 
 export default Signup;
+
