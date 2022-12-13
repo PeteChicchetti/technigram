@@ -5,6 +5,7 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
+    password: String!
     posts: [Post]
   }
 
@@ -13,6 +14,7 @@ const typeDefs = gql`
     title: String!
     content: String!
     user: User
+    reactions: [Reaction]
   }
 
   type Reaction {
@@ -28,11 +30,16 @@ const typeDefs = gql`
 
   type Query {
     user(userId: ID!): User
+    posts: [Post]
+    post(id: ID!): Post
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
+
+    addPost(title: String!, content: String!, userId: ID!): Post
+    addReaction(comment: String!, postId: ID!): Reaction
   }
 `;
 
