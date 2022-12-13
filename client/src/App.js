@@ -23,6 +23,7 @@ import Footer from './components/Footer';
 import ProtectRoute from './components/ProtectRoute';
 
 import './App.css';
+import './components/Navbar/navbar.css';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
