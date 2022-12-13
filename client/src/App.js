@@ -7,7 +7,6 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import Auth from './utils/auth';
 
@@ -28,6 +27,10 @@ import './App.css';
 import './components/SignUp/signup.css';
 import './components/Login/login.css'
 import './components/Navbar/navbar.css';
+import './components/Footer/footer.css';
+import './components/Builds/builds.css';
+import './components/Discussions/discussions.css';
+import './components/News/news.css';
 
 
 const httpLink = createHttpLink({
