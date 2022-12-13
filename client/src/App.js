@@ -12,7 +12,7 @@ import Auth from './utils/auth';
 
 /// IMPORT PAGES ///
 import Landing from './pages/Landing';
-import Signup from './pages/Signup';
+import Signup from './components/SignUp/index';
 import Login from './components/Login/index';
 import Dashboard from './pages/Dashboard';
 
