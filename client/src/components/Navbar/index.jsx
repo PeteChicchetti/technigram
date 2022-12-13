@@ -1,30 +1,44 @@
 import React from 'react';
+import { FaBars } from 'react-icons/fa';
 import { 
-  Nav, 
-  NavLink, 
-  Bars, 
-  NavMenu,  
+  Nav,
+  NavbarContainer,
+  NavLogo,
+  MobileIcon, 
+  NavMenu,
+  NavItem,
+  NavLinks,  
   NavBtn, 
   NavBtnLink 
 } from './NavbarElements'
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <>
         <Nav>
-          <NavLink to="/">
-            <h1>Logo</h1>
-          </NavLink>
-          <Bars />
-          <NavMenu>
-            <NavLink to="/news">News</NavLink>
-            <NavLink to="/builds">Builds</NavLink>
-            <NavLink to="/discussions">Discussions</NavLink>
-            <NavLink to="/sign-up">Sign Up</NavLink>
-          </NavMenu> 
-          <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
-          </NavBtn>
+          <NavbarContainer>
+            <NavLogo to="/">Logo</NavLogo>
+            <MobileIcon onClick={toggle}>
+              <FaBars />
+            </MobileIcon>
+            <NavMenu>
+              <NavItem>
+                <NavLinks to="/news">News</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/builds">Builds</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/discussions">Discussions</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/sign-up">Sign Up</NavLinks>
+              </NavItem>
+            </NavMenu> 
+            <NavBtn>
+              <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            </NavBtn>
+          </NavbarContainer>  
         </Nav>
     </>
   )

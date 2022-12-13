@@ -4,7 +4,7 @@ import { Link as LinkR } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 
 export const MenuContainer = styled.aside`
-    position: fixed:
+    position: fixed;
     z-index: 999;
     width: 100%;
     height: 100%;
@@ -36,7 +36,7 @@ export const MobileWrapper = styled.div`
     color: #fff;
 `;
 
-export const MobileMenu = styled.ul`
+export const MobileDropdown = styled.ul`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 80px);

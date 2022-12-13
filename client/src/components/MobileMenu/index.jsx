@@ -4,27 +4,27 @@ import {
     CloseIcon, 
     Icon, 
     MobileWrapper, 
-    MobileMenu, 
+    MobileDropdown, 
     MobileLink, 
     MobileBtnWrapper, 
     MobileRoute 
 } from './MobileMenuElements';
 
-const MobileMenu = () => {
+const MobileMenu = ({ isOpen, toggle }) => {
   return (
-    <MenuContainer>
-        <Icon>
+    <MenuContainer isOpen={isOpen} onClick={toggle}>
+        <Icon onClick={toggle}>
             <CloseIcon />
         </Icon>
         <MobileWrapper>
-            <MobileMenu>
-                <MobileLink to="/news">News</MobileLink>
-                <MobileLink to="/builds">Builds</MobileLink>
-                <MobileLink to="/discussions">Discussions</MobileLink>
-                <MobileLink to="/signup">Sign Up</MobileLink>
-            </MobileMenu>
+            <MobileDropdown>
+                <MobileLink to="/news" onClick={toggle}>News</MobileLink>
+                <MobileLink to="/builds" onClick={toggle}>Builds</MobileLink>
+                <MobileLink to="/discussions" onClick={toggle}>Discussions</MobileLink>
+                <MobileLink to="/signup" onClick={toggle}>Sign Up</MobileLink>
+            </MobileDropdown>
             <MobileBtnWrapper>
-                <MobileRoute to='/signin'>Sign In</MobileRoute>
+                <MobileRoute to='/signin' onClick={toggle}>Sign In</MobileRoute>
             </MobileBtnWrapper>
         </MobileWrapper>
     </MenuContainer>
