@@ -16,6 +16,7 @@ import Signup from './components/SignUp/index';
 import Login from './components/Login/index';
 import Dashboard from './pages/Dashboard';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 /// IMPORT COMPONENTS ///
@@ -58,6 +59,7 @@ function App() {
             element={Auth.loggedIn() ? <Dashboard /> : <ProtectRoute />}
           />
         </Routes>
+        <Footer />
       </Router>
     </ApolloProvider>
   );
