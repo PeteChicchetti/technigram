@@ -1,8 +1,31 @@
 .footer {
-    background-color: darkgray;
+    background-color: black;
+    padding-top: 7px;
 }
 
 .footer-text {
-    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.footer-text h3 {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+.footer-text a {
+    color: #15cdfc;
+    text-decoration: none;
+}
+
+.github {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.github:hover {
+    color: #15cdfc;
 }
