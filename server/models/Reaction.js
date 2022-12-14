@@ -14,9 +14,10 @@ const reactionSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User'
   },
-  post: {
-    type: Schema.Types.ObjectId,
-    ref: 'Post'
+},
+{
+  toJSON: {
+    virtuals: true,
   },
 });
 

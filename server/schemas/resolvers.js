@@ -7,7 +7,7 @@ const resolvers = {
     /// GETS ONE USER ///
     user: async (parent, _ , context) => {
       if (context.user) {
-        const userData = await (await User.findOne({ _id: context.user._id }).populate('posts').select('-__v -password'));
+        const userData = await User.findOne({ _id: context.user._id }).populate('posts').select('-__v -password');
 
         return userData;
       }
@@ -17,7 +17,7 @@ const resolvers = {
     /// GETS ONE POST ///
     post: async (parent, { postId }, context) => {
       if (context.post) {
-        const postData = await (await Post.findOne({ _id: postId }).populate('user').populate('reactions').select('-__v'));
+        const postData = await Post.findOne({ _id: postId }).populate('user').populate('reactions').select('-__v');
         return postData;
       }
     },
@@ -63,7 +63,6 @@ const resolvers = {
         {$addToSet:{posts: post}},
         {new: true}
         );
-
       return { updatedUser, post };
     },
     /// ADD REACTION ///
@@ -99,3 +98,5 @@ const resolvers = {
 };
 
 module.exports = resolvers;
+
+
