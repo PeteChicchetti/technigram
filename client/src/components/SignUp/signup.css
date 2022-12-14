@@ -18,7 +18,7 @@
     width: 35%;
     height: 75%;
     border-color: var(--primary);
-    margin: auto;
+    margin: 80px auto 0px auto;
   }
   
   .btn {
