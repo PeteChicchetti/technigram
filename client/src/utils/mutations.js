@@ -27,8 +27,8 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_POST = gql`
-mutation Mutation($title: String!, $content: String!, $userId: ID!) {
-  addPost(title: $title, content: $content, userId: $userId) {
+mutation Mutation($title: String!, $content: String!) {
+  addPost(title: $title, content: $content) {
     title
     content
     createdAt
@@ -45,7 +45,7 @@ mutation Mutation($title: String!, $content: String!, $userId: ID!) {
   }
 }
 `;
-
+///TODO: MAKE SERVER SIDE///
 export const UPDATE_POST = gql`
   mutation updatePost($postId: String!, $newTitle: String, $newContent: String) {
     updatePost(postId: $postId, newTitle: $newTitle, newContent: $newContent) {
@@ -55,10 +55,10 @@ export const UPDATE_POST = gql`
   }
 }
 `;
-
+///TODO: MAKE SERVER SIDE///
 export const DELETE_POST = gql`
-  mutation deletePost($postId: String!, $userId: String) {
-    deletePost(postId: $postId, userId: $userId) {
+  mutation deletePost($postId: String!) {
+    deletePost(postId: $postId) {
     user
   }
 }
@@ -75,8 +75,7 @@ mutation Mutation($comment: String!, $postId: ID!) {
   }
 }
 `;
-
-
+///TODO: MAKE SERVER SIDE///
 export const UPDATE_REACTION = gql`
   mutation updateReaction($reactionId: String!, $newComment: String) {
     updateReaction(reactionId: $reactionId, newComment: $newComment) {
@@ -84,15 +83,16 @@ export const UPDATE_REACTION = gql`
   }
 }
 `;
-
+///TODO: MAKE SERVER SIDE///
 export const DELETE_REACTION = gql`
-  mutation deleteReaction($reactionId: String!, $postId: String) {
+  mutation deleteReaction($reactionId: String!, $postId: ID!) {
   deleteReaction(reactionId: $reactionId, postId: $postId) {
     post
   }
 }
 `;
 //////////////////////////////////////////////////////////////////
+/*
 export const ADD_COURSE = gql`
   mutation addCourse($courseName: String!, $startDate: String!, $endDate: String!, $description: String!) {
   addCourse(courseName: $courseName, startDate: $startDate, endDate: $endDate, description: $description) {
@@ -141,4 +141,4 @@ export const DELETE_ASSIGNMENT = gql`
     course
   }
 }
-`;
+`;*/

@@ -23,6 +23,7 @@ const typeDefs = gql`
     comment: String!
     createdAt: String!
     user: User
+    post: Post
   }
 
   type Auth {
@@ -42,6 +43,11 @@ const typeDefs = gql`
 
     addPost(title: String!, content: String!): Post
     addReaction(comment: String!, postId: ID!): Reaction
+
+    deletePost(postId: ID!): Post
+    deleteReaction(reactionId: ID!, postId: ID!): Post
+
+
   }
 `;
 
