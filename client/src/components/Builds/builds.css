@@ -15,6 +15,7 @@
 }
 
 #addPost {
+    background-color: #15cdfc;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -28,23 +29,28 @@
 #buildPost {
     margin-top: 1rem;
     padding: 10px;
+    background-color: #0d0d0d;
 }
 
 #postHeader {
     padding-bottom: 3px;
-    border-bottom: 1px solid black;
+    
 }
 
 #postTitle {
     margin: 0px;
+    color: #fff;
 }
 
 #buildContent {
-    border-bottom: 1px solid black;
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
     margin: 0px;
+    color: #fff;
 }
 
 #postInfo {
     padding-top: 3px;
     text-align: right;
+    color: #fff;
 }
