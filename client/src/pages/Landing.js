@@ -1,21 +1,12 @@
-import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-import MobileMenu from '../components/MobileMenu';
-
+import React from 'react';
 
 
 const Landing = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggle = () => {
-    setIsOpen(!isOpen)
-  }
 
   return (
-    <>
-      <MobileMenu isOpen={isOpen} toggle={toggle}/>
-      <Navbar toggle={toggle} />
-    </>
+    <div>
+      Hello
+    </div>
   )
 };
 

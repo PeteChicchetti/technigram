@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link as LinkS } from 'react-scroll';
 import { Link as LinkR } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 
@@ -48,7 +47,7 @@ export const MobileDropdown = styled.ul`
     }
 `
 
-export const MobileLink = styled(LinkS)`
+export const MobileLink = styled(LinkR)`
     display: flex;
     align-items: center;
     justify-content: center;
