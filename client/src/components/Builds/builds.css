@@ -1,0 +1,30 @@
+#buildContainer {
+    margin-top: 80px;
+    padding: 0px;
+}
+
+#buildRow {
+    margin: auto;
+    padding: 0px;
+}
+
+#buildCol {
+    margin: auto;
+    padding: 1rem;
+    max-width: 900px;
+}
+
+#addPost {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#postText {
+    padding: 3px 3px 5px 3px;
+    text-decoration: none;
+    font-size: 20px; 
+}
+
+#buildPost {
+    margin-top: 1rem;
+}
