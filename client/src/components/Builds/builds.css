@@ -27,4 +27,24 @@
 
 #buildPost {
     margin-top: 1rem;
+    padding: 10px;
+}
+
+#postHeader {
+    padding-bottom: 3px;
+    border-bottom: 1px solid black;
+}
+
+#postTitle {
+    margin: 0px;
+}
+
+#buildContent {
+    border-bottom: 1px solid black;
+    margin: 0px;
+}
+
+#postInfo {
+    padding-top: 3px;
+    text-align: right;
 }
