@@ -5,9 +5,9 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     /// GETS ONE USER ///
-    user: async (parent, { userId }, context) => {
+    user: async (parent, _ , context) => {
       if (context.user) {
-        const userData = await (await User.findOne({ _id: userId }).select('-__v -password'));
+        const userData = await (await User.findOne({ _id: context.user._id }).select('-__v -password'));
 
         return userData;
       }
@@ -54,18 +54,30 @@ const resolvers = {
       return { token, user };
     },
     /// ADD POST ///
-    addPost: async (parent, args) => {
-      const post = await Post.create(args);
-      const token = signToken(post);
+    addPost: async (parent, {title, content}, context) => {
+      const post = await Post.create(
+        {tile: title, content: content, user: context.user._id}
+      );
+      const updatedUser = await User.findOneAndUpdate(
+        {_id: context.user._id},
+        {$addToSet:{posts: post}},
+        {new: true}
+        );
 
-      return { token, post };
+      return { updatedUser, post };
     },
     /// ADD REACTION ///
-    addReaction: async (parent, args) => {
-      const reaction = await Reaction.create(args);
-      const token = signToken(reaction);
+    addReaction: async (parent, {comment, postId}, context) => {
+      const reaction = await Reaction.create(
+        {comment: comment, user: context.user._id}
+        );
+      const updatedPost = await Post.findOneAndUpdate(
+        {_id: postId},
+        {$addToSet:{reactions: reaction}},
+        {new: true}
+        );
 
-      return { token, reaction };
+      return { updatedPost, reaction };
     },
   }
 };
