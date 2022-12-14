@@ -1,0 +1,29 @@
+.postform{
+    text-align: center;
+    width: 25%;
+    height: 75%;
+    border-color: var(--primary);
+    margin: 90px auto 0px auto;
+}
+
+.form-card {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+#form-contain{
+    padding-top: 10px;
+}
+
+#file-upload {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#post-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #15cdfc;
+    border-color: black;
+    color: black;
+}

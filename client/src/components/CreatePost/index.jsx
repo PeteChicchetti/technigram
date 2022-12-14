@@ -1,4 +1,7 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Card from 'react-bootstrap/Card';
 
 class CreatePost extends React.Component {
   constructor(props) {
@@ -29,11 +32,16 @@ class CreatePost extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="file" onChange={this.handleFileChange} />
-        <input type="text" value={this.state.caption} onChange={this.handleCaptionChange} placeholder="Enter a caption" />
-        <button type="submit">Post</button>
-      </form>
+      <main className='postform'>
+      <Card className='form-card'>
+      <Form.Group id='form-contain' onSubmit={this.handleSubmit}>
+        <Form.Control type="file" id="file-upload" onChange={this.handleFileChange} />
+        <Form.Text className="text-muted">Add a caption/description to your picture below</Form.Text>
+        <Form.Control type="text" id="text-input" value={this.state.caption} onChange={this.handleCaptionChange} placeholder="Enter a caption" />
+        <Button type="submit" id="post-button">Post</Button>
+      </Form.Group>
+      </Card>
+      </main>
     );
   }
 }
