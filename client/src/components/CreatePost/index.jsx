@@ -1,49 +1,62 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Card from 'react-bootstrap/Card';
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
 
-class CreatePost extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      file: null,
-      caption: ''
-    };
-  }
+import { ADD_POST } from '../../utils/mutations';
 
-  handleFileChange = (event) => {
-    this.setState({
-      file: event.target.files[0]
-    });
-  }
+const CreatePost = () => {
+  const [formState, setFormState] = useState({
+    title: '',
+    content: '',
+  });
 
-  handleCaptionChange = (event) => {
-    this.setState({
-      caption: event.target.value
-    });
-  }
+  const [addPost, { error }] = useMutation(ADD_POST);
 
-  handleSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // will need to add uploading of the file and caption to server
-  }
+    // On form submit, perform mutation and pass in form data object as arguments
+    // It is important that the object fields are match the defined parameters in `ADD_THOUGHT` mutation
+    try {
+      const { data } = addPost({
+        variables: { ...formState },
+      });
 
-  render() {
-    return (
-      <main className='postform'>
-      <Card className='form-card'>
-      <Form.Group id='form-contain' onSubmit={this.handleSubmit}>
-        <Form.Control type="file" id="file-upload" onChange={this.handleFileChange} />
-        <Form.Text className="text-muted">Add a caption/description to your picture below</Form.Text>
-        <Form.Control type="text" id="text-input" value={this.state.caption} onChange={this.handleCaptionChange} placeholder="Enter a caption" />
-        <Button type="submit" id="post-button">Post</Button>
-      </Form.Group>
-      </Card>
-      </main>
-    );
-  }
+      //window.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    if (name === 'title') {
+      setFormState({ ...formState, [name]: value });
+    } else if (name === 'content') {
+      setFormState({ ...formState, [name]: value });
+    }
+  };
+
+
+
+  return (
+    <main className='d-flex mainPage align-items-center justify-content-center'>
+      <div className='content'>
+        <h2 className='formHeader'>Contact</h2>
+        <form className='formCard' onSubmit={handleFormSubmit}>
+          <div className="form-group">
+            <label name="nameInput" >Name: </label>
+            <input type="text" className="form-control" id="nameInput" name='title' placeholder="Title" onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label name='messageInput' >Message:</label>
+            <textarea className="form-control" id="messageInput" rows="6" name='content' onChange={handleChange}></textarea>
+          </div>
+          <button type='submit'>Submit</button>
+        </form>
+      </div>
+    </main>
+  );
 }
 
 export default CreatePost
