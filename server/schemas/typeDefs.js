@@ -31,7 +31,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    user(userId: ID!): User
+    user: User
     posts: [Post]!
     post(postid: ID!): Post
   }
@@ -40,7 +40,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
 
-    addPost(title: String!, content: String!, userId: ID!): Post
+    addPost(title: String!, content: String!): Post
     addReaction(comment: String!, postId: ID!): Reaction
   }
 `;

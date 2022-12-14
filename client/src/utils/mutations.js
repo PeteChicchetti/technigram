@@ -27,12 +27,21 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_POST = gql`
-  mutation addPost($title: String!, $content: String!) {
-  addPost(title: $title, content: $content) {
-    _id
+mutation Mutation($title: String!, $content: String!, $userId: ID!) {
+  addPost(title: $title, content: $content, userId: $userId) {
     title
     content
     createdAt
+    user {
+      username
+    }
+    reactions {
+      comment
+      createdAt
+      user {
+        username
+      }
+    }
   }
 }
 `;
@@ -47,22 +56,26 @@ export const UPDATE_POST = gql`
 }
 `;
 
-// export const DELETE_POST = gql`
-//   mutation deletePost($postId: String!, $userId: String) {
-//     deletePost(postId: $postId, userId: $userId) {
-    
-//   }
-// }
-// `;
-
-export const ADD_REACTION = gql`
-  mutation addReaction($comment: String!) {
-  addReaction(comment: $comment) {
-    _id
-    comment
+export const DELETE_POST = gql`
+  mutation deletePost($postId: String!, $userId: String) {
+    deletePost(postId: $postId, userId: $userId) {
+    user
   }
 }
 `;
+
+export const ADD_REACTION = gql`
+mutation Mutation($comment: String!, $postId: ID!) {
+  addReaction(comment: $comment, postId: $postId) {
+    comment
+    createdAt
+    user {
+      username
+    }
+  }
+}
+`;
+
 
 export const UPDATE_REACTION = gql`
   mutation updateReaction($reactionId: String!, $newComment: String) {
@@ -79,7 +92,7 @@ export const DELETE_REACTION = gql`
   }
 }
 `;
-
+//////////////////////////////////////////////////////////////////
 export const ADD_COURSE = gql`
   mutation addCourse($courseName: String!, $startDate: String!, $endDate: String!, $description: String!) {
   addCourse(courseName: $courseName, startDate: $startDate, endDate: $endDate, description: $description) {
