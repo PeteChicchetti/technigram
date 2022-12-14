@@ -7,7 +7,7 @@ const resolvers = {
     /// GETS ONE USER ///
     user: async (parent, _ , context) => {
       if (context.user) {
-        const userData = await (await User.findOne({ _id: context.user._id }).select('-__v -password'));
+        const userData = await (await User.findOne({ _id: context.user._id }).populate('posts').select('-__v -password'));
 
         return userData;
       }
@@ -17,13 +17,13 @@ const resolvers = {
     /// GETS ONE POST ///
     post: async (parent, { postId }, context) => {
       if (context.post) {
-        const postData = await (await Post.findOne({ _id: postId }).populate('user').populate('reaction').select('-__v'));
+        const postData = await (await Post.findOne({ _id: postId }).populate('user').populate('reactions').select('-__v'));
         return postData;
       }
     },
     /// GETS ALL POSTS ///
     posts: async () => {
-        return await Post.find({}).populate('user').populate('reaction').select('-__v ');
+        return await Post.find({}).populate('user').select('-__v ');
     },
 
   },
@@ -78,6 +78,22 @@ const resolvers = {
         );
 
       return { updatedPost, reaction };
+    },
+    deletePost: async (parent, { postId }, context) => {
+      const post = await Post.findOne({ post: postId });
+      const updatedReaction = await post.reactions.remove();
+
+      // for (let i = 0; i < post.reactions.length(); i++) {
+      //   const element = array[i];
+        
+      // }
+      const deletedPost = await Post.findOneAndDelete({ post: postId });
+      const updatedUser = await User.findOneAndUpdate(
+        {_id: context.user._id},
+        {$pull:{posts: post}},
+        {new: true}
+        );
+      return { deletedPost, updatedUser, updatedReaction };
     },
   }
 };
