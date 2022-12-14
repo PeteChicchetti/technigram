@@ -33,7 +33,7 @@
 }
 
 #postHeader {
-    padding-bottom: 3px;
+    padding-bottom: 10px;
     
 }
 
@@ -45,12 +45,13 @@
 #buildContent {
     border-top: 1px solid #15cdfc;
     border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
     margin: 0px;
     color: #fff;
 }
 
 #postInfo {
-    padding-top: 3px;
+    padding-top: 10px;
     text-align: right;
     color: #fff;
 }
