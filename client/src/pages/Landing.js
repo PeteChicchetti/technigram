@@ -1,16 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
+import MobileMenu from '../components/MobileMenu';
+
+
 
 const Landing = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <main>
-      <Link to='/signup' style={{ textDecoration: 'none' }}>
-        <h1>Sign Up now</h1>
-      </Link>
-      <Link to='/login' style={{ textDecoration: 'none' }}>
-        <h1>Login now</h1>
-      </Link>
-    </main>
+    <>
+      <MobileMenu isOpen={isOpen} toggle={toggle}/>
+      <Navbar toggle={toggle} />
+    </>
   )
 };
 

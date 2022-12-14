@@ -15,7 +15,6 @@ import Landing from './pages/Landing';
 import Signup from './components/SignUp/index';
 import Login from './components/Login/index';
 import Dashboard from './pages/Dashboard';
-import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Builds from './components/Builds/index';
 import CreatePost from './components/CreatePost/index';
@@ -26,7 +25,7 @@ import ProtectRoute from './components/ProtectRoute';
 import './App.css';
 
 import './components/SignUp/signup.css';
-import './components/Login/login.css'
+import './components/Login/login.css';
 import './components/Navbar/navbar.css';
 import './components/Footer/footer.css';
 import './components/Builds/builds.css';
@@ -59,7 +58,6 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Navbar />
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/signup' element={<Signup />} />
