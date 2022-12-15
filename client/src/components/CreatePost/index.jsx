@@ -42,17 +42,17 @@ const CreatePost = () => {
   return (
     <main className='d-flex mainPage align-items-center justify-content-center'>
       <div className='content'>
-        <h2 className='formHeader'>Contact</h2>
+        <h2 className='formHeader'>Create A Post</h2>
         <form className='formCard' onSubmit={handleFormSubmit}>
-          <div className="form-group">
-            <label name="nameInput" >Name: </label>
-            <input type="text" className="form-control" id="nameInput" name='title' placeholder="Title" onChange={handleChange} />
+          <div className="form-group" id='title'>
+            <label name="nameInput" >Title: </label>
+            <input type="text" className="form-control" id="titleInput" name='title' placeholder="Title" onChange={handleChange} />
           </div>
-          <div className="form-group">
-            <label name='messageInput' >Message:</label>
+          <div className="form-group" id= 'description'>
+            <label name='messageInput' >Description:</label>
             <textarea className="form-control" id="messageInput" rows="6" name='content' onChange={handleChange}></textarea>
           </div>
-          <button type='submit'>Submit</button>
+          <button type='submit' className='postBtn'>Submit</button>
         </form>
       </div>
     </main>
