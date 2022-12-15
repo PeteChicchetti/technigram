@@ -15,15 +15,17 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
     /// GETS ONE POST ///
-    post: async (parent, { postId }, context) => {
-      if (context.post) {
-        const postData = await Post.findOne({ _id: postId }).populate('user').populate('reactions').select('-__v');
+    post: async (parent, { postid }) => {
+        const postData = await Post.findOne({ _id: postid }).populate({path: 'reactions', populate: {path: 'user'}}).populate({path: 'user'}).select('-__v');
         return postData;
-      }
     },
     /// GETS ALL POSTS ///
     posts: async () => {
-        return await Post.find({}).populate('user').select('-__v ');
+        return await Post.find({}).populate({path: 'reactions', populate: {path: 'user'}}).populate({path: 'user'}).select('-__v ');
+    },
+    /// GETS ALL USERS ///
+    users: async () => {
+        return await User.find({}).populate('posts').select('-__v ');
     },
 
   },
@@ -60,23 +62,26 @@ const resolvers = {
       )
       const updatedUser = await User.findOneAndUpdate(
         {_id: context.user._id},
-        {$addToSet:{posts: post}},
+        {$addToSet:{posts: post._id}},
         {new: true}
         );
-      return { updatedUser, post };
+
+      return  post ;
     },
     /// ADD REACTION ///
     addReaction: async (parent, {comment, postId}, context) => {
       const reaction = await Reaction.create(
         {comment: comment, user: context.user._id}
         );
+        console.log(reaction);
       const updatedPost = await Post.findOneAndUpdate(
         {_id: postId},
-        {$addToSet:{reactions: reaction}},
+        {$addToSet:{reactions: reaction._id}},
         {new: true}
         );
+        console.log(updatedPost);
 
-      return { updatedPost, reaction };
+      return reaction;
     },
     deletePost: async (parent, { postId }, context) => {
       const post = await Post.findOne({ post: postId });
