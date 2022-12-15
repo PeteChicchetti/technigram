@@ -42,7 +42,7 @@ const Login = (props) => {
   };
 
   return (
-    <Container id='signInContainer' className='signInCard'>
+    <Container id='signInContainer' className='signInForm'>
       {data ? (
         <p>Successfully logged in! You may now head{' '}<Link to='/'>back to the homepage.</Link></p>
       ) : (

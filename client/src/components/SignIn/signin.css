@@ -11,7 +11,12 @@ body {
   display: grid;
 }
 
-.signInCard{
+#signInContainer {
+  margin-top: 80px;
+  padding: 0px;
+}
+
+.signInForm{
   text-align: center;
   min-width: 250px;
   width: 35%;
@@ -19,6 +24,23 @@ body {
   border-color: var(--primary);
   margin: 80px auto 0px auto;
   color: #fff;
+}
+  
+#signInRow {
+  margin: auto;
+  padding: 0px;
+}
+
+#signInCol {
+  margin: auto;
+  padding: 1rem;
+  max-width: 900px;
+}
+
+#signInCard {
+  margin-top: 1rem;
+  padding: 10px;
+  background-color: #292727;
 }
 
 .formstyle {
