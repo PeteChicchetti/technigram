@@ -9,7 +9,7 @@ const Discussions = () => {
       <Row id='discRow' className='container-fluid'>
         <Col id='discCol'>
             <Card id='discPost'>
-            <Link id='postText' to="/createpost"><GrAdd /></Link>
+            <Link id='discText' to="/createpost"><GrAdd /></Link>
             </Card>
             <Col>
             <Card id='discPost'>
