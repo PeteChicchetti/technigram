@@ -3,7 +3,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import { GrAdd } from "react-icons/gr";
 
-const Discussion = () => {
+const Discussions = () => {
     return (
     <Container id='discContainer'>
       <Row id='discRow' className='container-fluid'>
@@ -26,4 +26,4 @@ const Discussion = () => {
   )
 }
 
-export default Discussion;
+export default Discussions;
