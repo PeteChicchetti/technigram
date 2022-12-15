@@ -1,0 +1,45 @@
+#newsContainer {
+    margin-top: 80px;
+    padding: 0px;
+}
+
+#newsRow {
+    margin: auto;
+    padding: 0px;
+}
+
+#newsCol {
+    margin: auto;
+    padding: 1rem;
+    max-width: 900px;
+}
+
+#newsPost {
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: #292727;
+}
+
+#newsHeader {
+    padding-bottom: 10px;
+    
+}
+
+#newsTitle {
+    margin: 0px;
+    color: #fff;
+}
+
+#newsContent {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
+    margin: 0px;
+    color: #fff;
+}
+
+#newsInfo {
+    padding-top: 10px;
+    text-align: right;
+    color: #fff;
+}

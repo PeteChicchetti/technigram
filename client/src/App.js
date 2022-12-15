@@ -22,6 +22,7 @@ import Footer from './components/Footer';
 import Builds from './components/Builds/index';
 import Discussions from './components/Discussions/index';
 import CreatePost from './components/CreatePost/index';
+import News from './components/News/index';
 
 /// IMPORT COMPONENTS ///
 import ProtectRoute from './components/ProtectRoute';
@@ -85,6 +86,7 @@ function App() {
           <Route path='/builds' element={<Builds />}/>
           <Route path='/discussions' element={<Discussions />}/>
           <Route path='/createpost' element={<CreatePost />}/>
+          <Route path='/news' element={<News />}/>
         </Routes>
         <Footer />
       </Router>
