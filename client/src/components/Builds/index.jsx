@@ -27,5 +27,5 @@ const Build = () => {
   )
 }
 
-export default Build
+export default Build;
 

@@ -20,6 +20,7 @@ import Signin from './components/SignIn/index';
 import Dashboard from './pages/Dashboard';
 import Footer from './components/Footer';
 import Builds from './components/Builds/index';
+import Discussions from './components/Discussions/index';
 import CreatePost from './components/CreatePost/index';
 
 /// IMPORT COMPONENTS ///
@@ -82,6 +83,7 @@ function App() {
             element={Auth.loggedIn() ? <Dashboard /> : <ProtectRoute />}
           />
           <Route path='/builds' element={<Builds />}/>
+          <Route path='/discussions' element={<Discussions />}/>
           <Route path='/createpost' element={<CreatePost />}/>
         </Routes>
         <Footer />
