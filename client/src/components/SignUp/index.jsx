@@ -44,14 +44,14 @@ const Signup = () => {
   };
 
   return (
-    <Container className='signUpCard'>
+    <Container id='signupContainer' className='signUpCard'>
       {data ? (
       <p variant='subtitle1'>Successfully created an account. You may now head{' '}<Link to='/'>back to the hompage.</Link></p>
     ) : (
-      <Row id='discRow' className='container-fluid'>
+      <Row id='signupRow' className='container-fluid'>
         <Col id='discCol'>
             <Col>
-            <Card id='discPost'>
+            <Card id='signupCard'>
             <form onSubmit={handleFormSubmit}>
             <h2>Sign Up</h2>
               <div className="form-group formstyle">

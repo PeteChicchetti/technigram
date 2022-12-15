@@ -1,7 +1,29 @@
 * {
   box-sizing: border-box;
 }
+
+#signupContainer {
+  margin-top: 80px;
+  padding: 0px;
+}
   
+#signupRow {
+  margin: auto;
+  padding: 0px;
+}
+
+#signupCol {
+  margin: auto;
+  padding: 1rem;
+  max-width: 900px;
+}
+
+#signupCard {
+  margin-top: 1rem;
+  padding: 10px;
+  background-color: #292727;
+}
+
 body {
   min-height: 100vh;
   display: flex;
