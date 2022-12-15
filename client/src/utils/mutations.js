@@ -27,20 +27,16 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_POST = gql`
-mutation Mutation($title: String!, $content: String!) {
+mutation AddPost($title: String!, $content: String!) {
   addPost(title: $title, content: $content) {
     title
     content
     createdAt
     user {
-      username
+      _id
     }
     reactions {
-      comment
-      createdAt
-      user {
-        username
-      }
+      _id
     }
   }
 }
@@ -70,7 +66,7 @@ mutation Mutation($comment: String!, $postId: ID!) {
     comment
     createdAt
     user {
-      username
+      _id
     }
   }
 }

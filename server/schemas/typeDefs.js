@@ -32,6 +32,7 @@ const typeDefs = gql`
 
   type Query {
     user: User
+    users: [User]
     posts: [Post]
     post(postid: ID!): Post
   }
@@ -41,7 +42,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
 
     addPost(title: String!, content: String!): Post
-    addReaction(comment: String!, postId: ID!): Reaction
+    addReaction(comment: String!, postId: ID!): Post
 
     deletePost(postId: ID!): Post
     deleteReaction(reactionId: ID!, postId: ID!): Post
