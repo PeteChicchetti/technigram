@@ -25,11 +25,11 @@ const Build = () => {
             ) : (
                 posts.map((post) =>(
                 <Card id='buildPost' key={post._id}>
-                  <div id='postHeader'>
-                    <h1 id='postTitle'>{post.title}</h1> 
+                  <div id='buildHeader'>
+                    <h1 id='buildTitle'>{post.title}</h1> 
                   </div>
                   <p id='buildContent'>{post.content}</p>
-                  <span id='postInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
+                  <span id='buildInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
                 </Card>
                 ))
             )}
