@@ -1,31 +1,55 @@
 
   
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    min-height: 100vh;
-    display: flex;
-    font-weight: 400;
-    font-family: sans-serif;
-    background: var(--bg);
-    display: grid;
-  }
-
- .signupCard{
-    text-align: center;
-    width: 35%;
-    height: 75%;
-    border-color: var(--primary);
-    margin: 80px auto 0px auto;
-  }
-  
-  .btn {
-    margin-top: 20px;
+* {
+  box-sizing: border-box;
 }
   
- 
+body {
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: sans-serif;
+  background: var(--bg);
+  display: grid;
+}
+
+.signupCard{
+  text-align: center;
+  min-width: 250px;
+  width: 35%;
+  height: 75%;
+  border-color: var(--primary);
+  margin: 80px auto 0px auto;
+  color: #fff;
+}
+  
+.formstyle {
+  margin-top: 8px;
+}
+
+h3 {
+  text-align: left;
+}
+
+#btn {
+  margin-top: 10px;
+  border-radius: 50px;
+  background: #15cdfc;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #010606;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+#btn:hover {
+  transition: all 0.2s ease-in-out;
+  background: #fff;
+  color: #010606;
+}
   
   
   
