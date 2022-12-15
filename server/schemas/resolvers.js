@@ -59,6 +59,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    //////////ADDS//////////
     /// ADD POST ///
     addPost: async (parent, {title, content}, context) => {
       const post = await Post.create(
@@ -85,6 +86,8 @@ const resolvers = {
 
       return reaction;
     },
+    //////////DELETES//////////
+    ///DELETE POST///
     deletePost: async (parent, { postid }, context) => {
       const post = await Post.findOne({ post: postid });
       for (let i = 0; i < post.reactions.length; i++) {
@@ -98,6 +101,7 @@ const resolvers = {
         );
       return { deletedPost, updatedUser, updatedReaction };
     },
+    ///DELETE REACTION///
     deleteReaction: async (parent, { reactionid, postid }) => {
       const deletedReaction = await Reaction.findOneAndDelete({ _id: reactionid });
       const updatedReaction = await Post.findOneAndUpdate(
@@ -107,6 +111,27 @@ const resolvers = {
         );
       return { deletedReaction, updatedReaction };
     },
+    //////////UPDATES//////////
+    ///UPDATE POST///
+    /*
+    updatePost: async (parent, { postid }) => {
+      const updatedPost = await Post.findOneAndUpdate(
+        {_id: postid},
+        {$pull:{reactions: deletedReaction._id}},
+        {new: true}
+        );
+      return { updatedPost };
+    },
+    ///UPDATE REACTION///
+    updateReaction: async (parent, { reactionid, postid }) => {
+      const deletedReaction = await Reaction.findOneAndDelete({ _id: reactionid });
+      const updatedReaction = await Post.findOneAndUpdate(
+        {_id: postid},
+        {$pull:{reactions: deletedReaction._id}},
+        {new: true}
+        );
+      return { deletedReaction, updatedReaction };
+    },*/
   }
 };
 

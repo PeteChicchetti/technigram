@@ -81,7 +81,6 @@ export const UPDATE_REACTION = gql`
   }
 }
 `;
-///TODO: MAKE SERVER SIDE///
 export const DELETE_REACTION = gql`
   mutation deleteReaction($reactionid: String!, $postid: ID!) {
   deleteReaction(reactionid: $reactionid, postid: $postid) {
