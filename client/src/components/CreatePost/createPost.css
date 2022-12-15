@@ -1,26 +1,54 @@
-.mainPage{
+
+.mainPage {
+    margin-top: 80px;
+    padding: 0px;
+    
+}
+.content{
+    margin: auto;
+    padding: 1rem;
+    width: 50%;
+}
+.formHeader{
     text-align: center;
-    width: 25%;
-    height: 45%;
-    border-color: var(--primary);
-    margin: 90px auto 0px auto;
 }
-
 .formCard {
-    margin-top: 10px;
-    padding-top: 10px;
+    margin: auto;
+    padding: 0px;
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: #292727;
+    border-radius: 10px;
 }
 
-/* #form-contain{
-    padding-top: 10px;
+.form-group {
+    padding-bottom: 10px;
+    color:white;
+    
+}
+#title {
+    width: 25%
 }
 
-#file-upload {
-    margin-top: 10px;
-    margin-bottom: 10px;
-} */
+#description {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+}
 
-.postBtn {
+#titleInput {
+    margin: 0px;
+    color: #fff;
+}
+
+#messageInput {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
+    margin: 0px;
+    color: #fff;
+}
+
+ .postBtn {
     margin-top: 10px;
     border-radius: 50px;
     background: #15cdfc;
@@ -32,10 +60,11 @@
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
+    
 }
 
 .postBtn:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #010606;
-}
+} 
