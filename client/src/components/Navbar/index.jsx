@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaBars } from 'react-icons/fa';
+import { FaBars} from 'react-icons/fa';
+import { GiComputerFan } from 'react-icons/gi';
 import { 
   Nav,
   NavbarContainer,
@@ -17,7 +18,7 @@ const Navbar = ({ toggle }) => {
     <>
         <Nav>
           <NavbarContainer>
-            <NavLogo to="/">Technigram</NavLogo>
+            <NavLogo to="/"><span id="fanIcon"><GiComputerFan/></span> Technigram</NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
