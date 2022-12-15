@@ -1,30 +1,46 @@
+* {
+    box-sizing: border-box;
+}
 
-.mainPage {
+#createPostContainer {
     margin-top: 80px;
     padding: 0px;
-    
 }
-.content    {
-    min-width: 280px;
-    margin: auto;
-    padding: 1rem;
-    width: 50%;
-}
-.formHeader{
+
+.createPostForm{
     text-align: center;
-}
-.formCard {
+    min-width: 250px;
+    width: 35%;
+    height: 75%;
+    border-color: var(--primary);
+    margin: 80px auto 0px auto;
+    color: #fff;
+  }
+
+#createPostRow {
     margin: auto;
     padding: 0px;
+}
+
+#createPostCol {
+    margin: auto;
+    padding: 1rem;
+    max-width: 900px;
+}
+
+#createPostCard {
     margin-top: 1rem;
     padding: 10px;
     background-color: #292727;
-    border-radius: 10px;
 }
 
-.form-group {
-    padding-bottom: 10px;
-    color:white; 
+body {
+    min-height: 100vh;
+    display: flex;
+    font-weight: 400;
+    font-family: sans-serif;
+    background: var(--bg);
+    display: grid;
 }
 
 #createPostTitle, #createPostDescription {
@@ -36,19 +52,23 @@
     border-bottom: 1px solid #15cdfc;
 }
 
-#titleInput {
-    margin: 0px;
+#titleForm {
+    margin-top: 8px; 
 }
 
-#messageInput {
+#descriptionForm {
     border-top: 1px solid #15cdfc;
     border-bottom: 1px solid #15cdfc;
-    padding: 10px 0px;
-    margin: 0px;   
+    margin-top: 8px;
+    padding-bottom: 8px; 
 }
 
- .postBtn {
-    margin-top: 10px;
+#titleInput, #messageInput {
+    padding: 5px; 
+}
+
+.postBtn {
+    margin-top: 8px;
     border-radius: 50px;
     background: #15cdfc;
     white-space: nowrap;

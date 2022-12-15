@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { useMutation } from '@apollo/client';
 
 import { ADD_POST } from '../../utils/mutations';
@@ -40,23 +41,28 @@ const CreatePost = () => {
 
 
   return (
-    <main className='d-flex mainPage align-items-center justify-content-center'>
-      <div className='content'>
-        <h2 className='formHeader' id='createPostHeader'>Create A Post</h2>
-        <form className='formCard' onSubmit={handleFormSubmit}>
-          <div className="form-group" id='title'>
-            <h3 name="nameInput" id='createPostTitle'>Title</h3>
-            <input type="text" className="form-control" id="titleInput" name='title' placeholder="Title" onChange={handleChange} />
-          </div>
-          <div className="form-group" id= 'description'>
-            <h3 name='messageInput' id='createPostDescription'>Description</h3>
-            <textarea className="form-control" id="messageInput" rows="6" name='content' onChange={handleChange} placeholder='Description'></textarea>
-          </div>
+    <Container id='createPostContainer' className='createPostForm'>
+      <Row id='createPostRow' className='container-fluid'>
+        <Col id='createPostCol'>
+            <Card id='createPostCard'>
+            <form className='formCard' onSubmit={handleFormSubmit}>
+            <h2 className='formHeader' id='createPostHeader'>Create A Post</h2>
+              <div className="form-group" id='titleForm'>
+                <h3 name="nameInput" id='createPostTitle'>Title</h3>
+                <input type="text" className="form-control" id="titleInput" name='title' placeholder="Title" onChange={handleChange} />
+              </div>
+              <div className="form-group" id='descriptionForm'>
+                <h3 name='messageInput' id='createPostDescription'>Description</h3>
+                <textarea className="form-control" id="messageInput" rows="6" name='content' onChange={handleChange} placeholder='Description' resize='none'></textarea>
+              </div>
           <button type='submit' className='postBtn'>Submit</button>
           
         </form>
-      </div>
-    </main>
+            </Card>
+        </Col>
+      </Row>
+    </Container>
+   
   );
 }
 

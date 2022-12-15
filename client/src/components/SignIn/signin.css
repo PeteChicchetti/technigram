@@ -52,6 +52,7 @@ h3 {
 }
 
 #signInBtn {
+  margin-top: 8px;
   border-radius: 50px;
   background: #15cdfc;
   white-space: nowrap;
