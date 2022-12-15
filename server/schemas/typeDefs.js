@@ -42,10 +42,10 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
 
     addPost(title: String!, content: String!): Post
-    addReaction(comment: String!, postId: ID!): Post
+    addReaction(comment: String!, postId: ID!): Reaction
 
     deletePost(postId: ID!): Post
-    deleteReaction(reactionId: ID!, postId: ID!): Post
+    deleteReaction(reactionId: ID!, postId: ID!): Reaction
 
 
   }

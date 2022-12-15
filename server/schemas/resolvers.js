@@ -87,10 +87,6 @@ const resolvers = {
       const post = await Post.findOne({ post: postId });
       const updatedReaction = await post.reactions.remove();
 
-      // for (let i = 0; i < post.reactions.length(); i++) {
-      //   const element = array[i];
-        
-      // }
       const deletedPost = await Post.findOneAndDelete({ post: postId });
       const updatedUser = await User.findOneAndUpdate(
         {_id: context.user._id},
