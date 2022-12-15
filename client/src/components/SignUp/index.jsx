@@ -44,7 +44,7 @@ const Signup = () => {
   };
 
   return (
-    <Container className='signupCard'>
+    <Container className='signUpCard'>
       {data ? (
       <p variant='subtitle1'>Successfully created an account. You may now head{' '}<Link to='/'>back to the hompage.</Link></p>
     ) : (
@@ -89,7 +89,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
               </div>
-              <button type='submit' id='SignUpBtn'>Sign Up</button>
+              <button type='submit' id='signUpBtn'>Sign Up</button>
             </form>
             </Card>
             </Col>

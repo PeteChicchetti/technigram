@@ -42,7 +42,7 @@ const Login = (props) => {
   };
 
   return (
-    <Container className='loginCard'>
+    <Container className='signInCard'>
       {data ? (
         <p>Successfully logged in! You may now head{' '}<Link to='/'>back to the homepage.</Link></p>
       ) : (

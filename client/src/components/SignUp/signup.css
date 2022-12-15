@@ -1,5 +1,3 @@
-
-  
 * {
   box-sizing: border-box;
 }
@@ -13,7 +11,7 @@ body {
   display: grid;
 }
 
-.signupCard{
+.signUpCard{
   text-align: center;
   min-width: 250px;
   width: 35%;
@@ -31,7 +29,7 @@ h3 {
   text-align: left;
 }
 
-#SignUpBtn {
+#signUpBtn {
   border-radius: 50px;
   background: #15cdfc;
   white-space: nowrap;
@@ -44,7 +42,7 @@ h3 {
   text-decoration: none;
 }
 
-#btn:hover {
+#SignUpBtn:hover {
   transition: all 0.2s ease-in-out;
   background: #fff;
   color: #010606;
