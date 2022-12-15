@@ -8,7 +8,7 @@ const Discussions = () => {
     <Container id='discContainer'>
       <Row id='discRow' className='container-fluid'>
         <Col id='discCol'>
-            <Card id='discPost'>
+            <Card id='discPostBtn'>
             <Link id='discText' to="/createpost"><GrAdd /></Link>
             </Card>
             <Col>
