@@ -1,29 +1,70 @@
-.postform{
+
+.mainPage {
+    margin-top: 80px;
+    padding: 0px;
+    
+}
+.content{
+    margin: auto;
+    padding: 1rem;
+    width: 50%;
+}
+.formHeader{
     text-align: center;
-    width: 25%;
-    height: 75%;
-    border-color: var(--primary);
-    margin: 90px auto 0px auto;
+}
+.formCard {
+    margin: auto;
+    padding: 0px;
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: #292727;
+    border-radius: 10px;
 }
 
-.form-card {
+.form-group {
+    padding-bottom: 10px;
+    color:white;
+    
+}
+#title {
+    width: 25%
+}
+
+#description {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+}
+
+#titleInput {
+    margin: 0px;
+    color: #fff;
+}
+
+#messageInput {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
+    margin: 0px;
+    color: #fff;
+}
+
+ .postBtn {
     margin-top: 10px;
-    padding-top: 10px;
+    border-radius: 50px;
+    background: #15cdfc;
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: #010606;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    
 }
 
-#form-contain{
-    padding-top: 10px;
-}
-
-#file-upload {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#post-button {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #15cdfc;
-    border-color: black;
-    color: black;
-}
+.postBtn:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+} 
