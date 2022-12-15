@@ -6,6 +6,16 @@
   margin-top: 80px;
   padding: 0px;
 }
+
+.signUpForm{
+  text-align: center;
+  min-width: 250px;
+  width: 35%;
+  height: 75%;
+  border-color: var(--primary);
+  margin: 80px auto 0px auto;
+  color: #fff;
+}
   
 #signUpRow {
   margin: auto;
@@ -31,16 +41,6 @@ body {
   font-family: sans-serif;
   background: var(--bg);
   display: grid;
-}
-
-.signUpCard{
-  text-align: center;
-  min-width: 250px;
-  width: 35%;
-  height: 75%;
-  border-color: var(--primary);
-  margin: 80px auto 0px auto;
-  color: #fff;
 }
   
 .formstyle {

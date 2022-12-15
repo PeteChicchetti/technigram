@@ -44,7 +44,7 @@ const Signup = () => {
   };
 
   return (
-    <Container id='signUpContainer' className='signUpCard'>
+    <Container id='signUpContainer' className='signUpForm'>
       {data ? (
       <p variant='subtitle1'>Successfully created an account. You may now head{' '}<Link to='/'>back to the hompage.</Link></p>
     ) : (
