@@ -42,14 +42,14 @@ const Login = (props) => {
   };
 
   return (
-    <Container id='discContainer' className='loginCard'>
+    <Container className='loginCard'>
       {data ? (
         <p>Successfully logged in! You may now head{' '}<Link to='/'>back to the homepage.</Link></p>
       ) : (
-      <Row id='discRow' className='container-fluid'>
-        <Col id='discCol'>
+      <Row id='signInRow' className='container-fluid'>
+        <Col id='signInCol'>
             <Col>
-            <Card id='discPost'>
+            <Card id='signInPost'>
             <form onSubmit={handleFormSubmit}>
               <h2>Sign In</h2>
               <div className='form-group formstyle'>
@@ -75,7 +75,7 @@ const Login = (props) => {
                 onChange={handleChange}
               />
             </div>
-              <button type='submit' id='btn'>Sign In</button>
+              <button type='submit' id='signInBtn'>Sign In</button>
             </form>
             </Card>
             </Col>
