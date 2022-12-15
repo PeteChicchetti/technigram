@@ -1,3 +1,7 @@
 #fanIcon {
     padding: 0px 6px 4px 0px;
 }
+
+#nav-link:hover {
+    color: #15cdfc;
+}

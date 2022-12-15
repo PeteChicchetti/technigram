@@ -19,22 +19,22 @@ const Navbar = ({ toggle }) => {
     <>
         <Nav>
           <NavbarContainer>
-            <NavLogo to="/"><span id="fanIcon"><GiComputerFan/></span> Technigram</NavLogo>
+            <NavLogo to="/" id="nav-link"><span id="fanIcon"><GiComputerFan/></span> Technigram</NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
             <NavMenu>
               <NavItem>
-                <NavLinks to="/news">News</NavLinks>
+                <NavLinks to="/news" id="nav-link">News</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/builds">Builds</NavLinks>
+                <NavLinks to="/builds" id="nav-link">Builds</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/discussions">Discussions</NavLinks>
+                <NavLinks to="/discussions" id="nav-link">Discussions</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/signup">Sign Up</NavLinks>
+                <NavLinks to="/signup" id="nav-link">Sign Up</NavLinks>
               </NavItem>
             </NavMenu> 
             <NavBtn>
