@@ -2,23 +2,23 @@
   box-sizing: border-box;
 }
 
-#signupContainer {
+#signUpContainer {
   margin-top: 80px;
   padding: 0px;
 }
   
-#signupRow {
+#signUpRow {
   margin: auto;
   padding: 0px;
 }
 
-#signupCol {
+#signUpCol {
   margin: auto;
   padding: 1rem;
   max-width: 900px;
 }
 
-#signupCard {
+#signUpCard {
   margin-top: 1rem;
   padding: 10px;
   background-color: #292727;
