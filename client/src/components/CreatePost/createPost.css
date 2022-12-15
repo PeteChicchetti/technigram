@@ -26,9 +26,6 @@
     color:white;
     
 }
-#title {
-    width: 25%
-}
 
 #description {
     border-top: 1px solid #15cdfc;
@@ -37,7 +34,7 @@
 
 #titleInput {
     margin: 0px;
-    color: #fff;
+    
 }
 
 #messageInput {
@@ -45,7 +42,7 @@
     border-bottom: 1px solid #15cdfc;
     padding: 10px 0px;
     margin: 0px;
-    color: #fff;
+    
 }
 
  .postBtn {
