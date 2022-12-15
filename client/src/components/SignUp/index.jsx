@@ -89,7 +89,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
               </div>
-              <button type='submit' id='btn'>Sign Up</button>
+              <button type='submit' id='SignUpBtn'>Sign Up</button>
             </form>
             </Card>
             </Col>

@@ -31,8 +31,7 @@ h3 {
   text-align: left;
 }
 
-#btn {
-  margin-top: 10px;
+#SignUpBtn {
   border-radius: 50px;
   background: #15cdfc;
   white-space: nowrap;
