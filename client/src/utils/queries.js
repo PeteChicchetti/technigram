@@ -37,12 +37,13 @@ query Query($postid: ID!) {
 }
 `;
 export const QUERY_POSTS = gql`
-query posts {
-  post {
+query Query {
+  posts {
     title
     content
+    _id
     createdAt
-    user{
+    user {
       username
     }
   }
