@@ -9,7 +9,7 @@ const Build = () => {
     <Container id='buildContainer'>
       <Row id='buildRow' className='container-fluid'>
         <Col id='buildCol'>
-            <Card id='buildPost'>
+            <Card id='buildPostBtn'>
             <Link id='buildText' to="/createpost"><GrAdd /></Link>
             </Card>
             <Col>

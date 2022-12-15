@@ -44,14 +44,14 @@ const Signup = () => {
   };
 
   return (
-    <Container id='discContainer' className='signupCard'>
+    <Container id='signUpContainer' className='signUpForm'>
       {data ? (
       <p variant='subtitle1'>Successfully created an account. You may now head{' '}<Link to='/'>back to the hompage.</Link></p>
     ) : (
-      <Row id='discRow' className='container-fluid'>
+      <Row id='signUpRow' className='container-fluid'>
         <Col id='discCol'>
             <Col>
-            <Card id='discPost'>
+            <Card id='signUpCard'>
             <form onSubmit={handleFormSubmit}>
             <h2>Sign Up</h2>
               <div className="form-group formstyle">
@@ -89,7 +89,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
               </div>
-              <button type='submit' id='SignUpBtn'>Sign Up</button>
+              <button type='submit' id='signUpBtn'>Sign Up</button>
             </form>
             </Card>
             </Col>

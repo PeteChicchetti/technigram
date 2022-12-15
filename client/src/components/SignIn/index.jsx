@@ -42,14 +42,14 @@ const Login = (props) => {
   };
 
   return (
-    <Container className='loginCard'>
+    <Container id='signInContainer' className='signInForm'>
       {data ? (
         <p>Successfully logged in! You may now head{' '}<Link to='/'>back to the homepage.</Link></p>
       ) : (
       <Row id='signInRow' className='container-fluid'>
         <Col id='signInCol'>
             <Col>
-            <Card id='signInPost'>
+            <Card id='signInCard'>
             <form onSubmit={handleFormSubmit}>
               <h2>Sign In</h2>
               <div className='form-group formstyle'>

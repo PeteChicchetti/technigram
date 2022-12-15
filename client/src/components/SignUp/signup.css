@@ -1,19 +1,13 @@
-
-  
 * {
   box-sizing: border-box;
 }
-  
-body {
-  min-height: 100vh;
-  display: flex;
-  font-weight: 400;
-  font-family: sans-serif;
-  background: var(--bg);
-  display: grid;
+
+#signUpContainer {
+  margin-top: 80px;
+  padding: 0px;
 }
 
-.signupCard{
+.signUpForm{
   text-align: center;
   min-width: 250px;
   width: 35%;
@@ -21,6 +15,32 @@ body {
   border-color: var(--primary);
   margin: 80px auto 0px auto;
   color: #fff;
+}
+  
+#signUpRow {
+  margin: auto;
+  padding: 0px;
+}
+
+#signUpCol {
+  margin: auto;
+  padding: 1rem;
+  max-width: 900px;
+}
+
+#signUpCard {
+  margin-top: 1rem;
+  padding: 10px;
+  background-color: #292727;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: sans-serif;
+  background: var(--bg);
+  display: grid;
 }
   
 .formstyle {
@@ -31,7 +51,7 @@ h3 {
   text-align: left;
 }
 
-#SignUpBtn {
+#signUpBtn {
   border-radius: 50px;
   background: #15cdfc;
   white-space: nowrap;
@@ -44,7 +64,7 @@ h3 {
   text-decoration: none;
 }
 
-#btn:hover {
+#SignUpBtn:hover {
   transition: all 0.2s ease-in-out;
   background: #fff;
   color: #010606;
