@@ -4,7 +4,8 @@
     padding: 0px;
     
 }
-.content{
+.content    {
+    min-width: 280px;
     margin: auto;
     padding: 1rem;
     width: 50%;
@@ -23,11 +24,11 @@
 
 .form-group {
     padding-bottom: 10px;
-    color:white;
-    
+    color:white; 
 }
-#title {
-    width: 25%
+
+#createPostTitle, #createPostDescription {
+    margin-top: 8px;
 }
 
 #description {
@@ -37,15 +38,13 @@
 
 #titleInput {
     margin: 0px;
-    color: #fff;
 }
 
 #messageInput {
     border-top: 1px solid #15cdfc;
     border-bottom: 1px solid #15cdfc;
     padding: 10px 0px;
-    margin: 0px;
-    color: #fff;
+    margin: 0px;   
 }
 
  .postBtn {
@@ -60,7 +59,6 @@
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-    
 }
 
 .postBtn:hover {
