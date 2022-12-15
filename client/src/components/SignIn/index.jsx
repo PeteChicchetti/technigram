@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
@@ -41,44 +42,50 @@ const Login = (props) => {
   };
 
   return (
-    <main className='loginCard'>
+    <Container id='signInContainer' className='signInForm'>
       {data ? (
         <p>Successfully logged in! You may now head{' '}<Link to='/'>back to the homepage.</Link></p>
       ) : (
-        <div>
-          <form onSubmit={handleFormSubmit}>
-          <h2>Login</h2>
-          <div className='form-group'>
-            <h3>Email</h3>
-            <input
-              className='form-control'
-              placeholder='Your email'
-              name='email'
-              type='email'
-              value={formState.email}
-              onChange={handleChange}
-            />
-          </div>
+      <Row id='signInRow' className='container-fluid'>
+        <Col id='signInCol'>
+            <Col>
+            <Card id='signInCard'>
+            <form onSubmit={handleFormSubmit}>
+              <h2>Sign In</h2>
+              <div className='form-group formstyle'>
+                <h3>Email</h3>
+                <input
+                  className='form-control'
+                  placeholder='Email'
+                  name='email'
+                  type='email'
+                  value={formState.email}
+                  onChange={handleChange}
+                />
+              </div>
 
-          <div className='form-group'>
-            <h3>Password</h3>
-            <input
-              className='form-control'
-              placeholder='Your password'
-              name='password'
-              type='password'
-              value={formState.password}
-              onChange={handleChange}
-            />
-          </div>
-            <button type='submit' className='btn btn-dark btn-lg btn-block'>Login</button>
-          </form>
-        </div>
+            <div className='form-group formstyle'>
+              <h3>Password</h3>
+              <input
+                className='form-control'
+                placeholder='Password'
+                name='password'
+                type='password'
+                value={formState.password}
+                onChange={handleChange}
+              />
+            </div>
+              <button type='submit' id='signInBtn'>Sign In</button>
+            </form>
+            </Card>
+            </Col>
+        </Col>
+      </Row>
       )}
       {error && (
         <div>{error.message}</div>
       )}
-    </main>
+    </Container>
   );
 };
 

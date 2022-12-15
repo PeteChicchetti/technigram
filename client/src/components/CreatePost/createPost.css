@@ -1,29 +1,88 @@
-.postform{
+* {
+    box-sizing: border-box;
+}
+
+#createPostContainer {
+    margin-top: 80px;
+    padding: 0px;
+}
+
+.createPostForm{
     text-align: center;
-    width: 25%;
+    min-width: 250px;
+    width: 35%;
     height: 75%;
     border-color: var(--primary);
-    margin: 90px auto 0px auto;
+    margin: 80px auto 0px auto;
+    color: #fff;
+  }
+
+#createPostRow {
+    margin: auto;
+    padding: 0px;
 }
 
-.form-card {
-    margin-top: 10px;
-    padding-top: 10px;
+#createPostCol {
+    margin: auto;
+    padding: 1rem;
+    max-width: 900px;
 }
 
-#form-contain{
-    padding-top: 10px;
+#createPostCard {
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: #292727;
 }
 
-#file-upload {
-    margin-top: 10px;
-    margin-bottom: 10px;
+body {
+    min-height: 100vh;
+    display: flex;
+    font-weight: 400;
+    font-family: sans-serif;
+    background: var(--bg);
+    display: grid;
 }
 
-#post-button {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #15cdfc;
-    border-color: black;
-    color: black;
+#createPostTitle, #createPostDescription {
+    margin-top: 8px;
 }
+
+#description {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+}
+
+#titleForm {
+    margin-top: 8px; 
+}
+
+#descriptionForm {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+    margin-top: 8px;
+    padding-bottom: 8px; 
+}
+
+#titleInput, #messageInput {
+    padding: 5px; 
+}
+
+.postBtn {
+    margin-top: 8px;
+    border-radius: 50px;
+    background: #15cdfc;
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: #010606;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.postBtn:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+} 

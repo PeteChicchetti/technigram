@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaBars } from 'react-icons/fa';
+import { FaBars} from 'react-icons/fa';
+import { GiComputerFan } from 'react-icons/gi';
 import { 
   Nav,
   NavbarContainer,
@@ -12,12 +13,13 @@ import {
   NavBtnLink 
 } from './NavbarElements'
 
+
 const Navbar = ({ toggle }) => {
   return (
     <>
         <Nav>
           <NavbarContainer>
-            <NavLogo to="/">Technigram</NavLogo>
+            <NavLogo to="/"><span id="fanIcon"><GiComputerFan/></span> Technigram</NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>

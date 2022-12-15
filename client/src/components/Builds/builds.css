@@ -14,16 +14,17 @@
     max-width: 900px;
 }
 
-#addPost {
+#buildPostBtn {
     background-color: #15cdfc;
     margin-bottom: 1rem;
-    text-align: center;
 }
 
-#postText {
+#buildText {
     padding: 3px 3px 5px 3px;
     text-decoration: none;
-    font-size: 20px; 
+    font-size: 20px;
+    text-align: center;
+    background-color: #15cdfc;
 }
 
 #buildPost {
@@ -32,12 +33,12 @@
     background-color: #292727;
 }
 
-#postHeader {
+#buildHeader {
     padding-bottom: 10px;
     
 }
 
-#postTitle {
+#buildTitle {
     margin: 0px;
     color: #fff;
 }
@@ -50,7 +51,7 @@
     color: #fff;
 }
 
-#postInfo {
+#buildInfo {
     padding-top: 10px;
     text-align: right;
     color: #fff;
