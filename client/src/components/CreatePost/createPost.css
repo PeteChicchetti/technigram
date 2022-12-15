@@ -1,29 +1,41 @@
-.postform{
+.mainPage{
     text-align: center;
     width: 25%;
-    height: 75%;
+    height: 45%;
     border-color: var(--primary);
     margin: 90px auto 0px auto;
 }
 
-.form-card {
+.formCard {
     margin-top: 10px;
     padding-top: 10px;
 }
 
-#form-contain{
+/* #form-contain{
     padding-top: 10px;
 }
 
 #file-upload {
     margin-top: 10px;
     margin-bottom: 10px;
+} */
+
+.postBtn {
+    margin-top: 10px;
+    border-radius: 50px;
+    background: #15cdfc;
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: #010606;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
 }
 
-#post-button {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #15cdfc;
-    border-color: black;
-    color: black;
+.postBtn:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
 }
