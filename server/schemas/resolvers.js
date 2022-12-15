@@ -27,6 +27,10 @@ const resolvers = {
     users: async () => {
         return await User.find({}).populate('posts').select('-__v ');
     },
+    /// GETS ALL REACTIONS ///
+    reactions: async () => {
+        return await Reaction.find({}).populate({path: 'user'}).select('-__v ');
+    },
 
   },
 
@@ -69,31 +73,39 @@ const resolvers = {
       return  post ;
     },
     /// ADD REACTION ///
-    addReaction: async (parent, {comment, postId}, context) => {
+    addReaction: async (parent, {comment, postid}, context) => {
       const reaction = await Reaction.create(
         {comment: comment, user: context.user._id}
         );
-        console.log(reaction);
       const updatedPost = await Post.findOneAndUpdate(
-        {_id: postId},
+        {_id: postid},
         {$addToSet:{reactions: reaction._id}},
         {new: true}
         );
-        console.log(updatedPost);
 
       return reaction;
     },
-    deletePost: async (parent, { postId }, context) => {
-      const post = await Post.findOne({ post: postId });
-      const updatedReaction = await post.reactions.remove();
-
-      const deletedPost = await Post.findOneAndDelete({ post: postId });
+    deletePost: async (parent, { postid }, context) => {
+      const post = await Post.findOne({ post: postid });
+      for (let i = 0; i < post.reactions.length; i++) {
+        let updatedReaction = await Reaction.findOneAndDelete({ _id: post.reactions[i]._id });
+        }
+      const deletedPost = await Post.findOneAndDelete({ post: postid });
       const updatedUser = await User.findOneAndUpdate(
         {_id: context.user._id},
-        {$pull:{posts: post}},
+        {$pull:{posts: post._id}},
         {new: true}
         );
       return { deletedPost, updatedUser, updatedReaction };
+    },
+    deleteReaction: async (parent, { reactionid, postid }) => {
+      const deletedReaction = await Reaction.findOneAndDelete({ _id: reactionid });
+      const updatedReaction = await Post.findOneAndUpdate(
+        {_id: postid},
+        {$pull:{reactions: deletedReaction._id}},
+        {new: true}
+        );
+      return { deletedReaction, updatedReaction };
     },
   }
 };
