@@ -53,7 +53,7 @@ const Navbar = ({ toggle }) => {
               </NavItem> }
             </NavMenu> 
             <NavBtn>
-              {Auth.loggedIn() ? <NavBtnLink  id="nav-link">Sign Out</NavBtnLink> : <NavBtnLink onClick={() => setIsSignedIn(!isSignedIn)} to="/signin">Sign In</NavBtnLink>}
+              {Auth.loggedIn() ? <NavBtnLink  id="nav-link" onClick={Auth.logout}>Sign Out</NavBtnLink> : <NavBtnLink onClick={() => setIsSignedIn(!isSignedIn)} to="/signin">Sign In</NavBtnLink>}
             </NavBtn>
           </NavbarContainer>  
         </Nav>
