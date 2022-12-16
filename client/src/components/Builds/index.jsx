@@ -16,24 +16,30 @@ const Build = () => {
     <Container id='buildContainer'>
       <Row id='buildRow' className='container-fluid'>
         <Col id='buildCol'>
-            <Card id='buildPostBtn'>
+          <Card id='buildPostBtn'>
             <Link id='buildText' to="/createpost"><GrAdd /></Link>
-            </Card>
-            <Col>
+          </Card>
+          <Col>
             {loading ? (
               <p>loading</p>
             ) : (
-                posts.map((post) =>(
+              posts.map((post) => (
                 <Card id='buildPost' key={post._id}>
                   <div id='buildHeader'>
-                    <h1 id='buildTitle'>{post.title}</h1> 
+                    <h1 id='buildTitle'>{post.title}</h1>
                   </div>
                   <p id='buildContent'>{post.content}</p>
                   <span id='buildInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
+                  <Link
+                    className="btn btn-block btn-squared btn-light text-dark"
+                    to={`/builds/${post._id}`}
+                  >
+                    View Post
+                  </Link>
                 </Card>
-                ))
+              ))
             )}
-            </Col>
+          </Col>
         </Col>
       </Row>
     </Container>

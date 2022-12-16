@@ -20,6 +20,7 @@ import Signin from './components/SignIn/index';
 import Dashboard from './pages/Dashboard';
 import Footer from './components/Footer';
 import Builds from './components/Builds/index';
+import SingleBuild from './components/SingleBuild/index';
 import Discussions from './components/Discussions/index';
 import CreatePost from './components/CreatePost/index';
 import News from './components/News/index';
@@ -34,6 +35,7 @@ import './components/SignIn/signin.css';
 import './components/Navbar/navbar.css';
 import './components/Footer/footer.css';
 import './components/Builds/builds.css';
+import './components/SingleBuild/singleBuild.css';
 import './components/Discussions/discussions.css';
 import './components/News/news.css';
 import './components/CreatePost/createPost.css';
@@ -85,6 +87,7 @@ function App() {
             element={Auth.loggedIn() ? <Dashboard /> : <ProtectRoute />}
           />
           <Route path='/builds' element={<Builds />}/>
+          <Route path="/builds/:postid" element={<SingleBuild />}/>
           <Route path='/discussions' element={<Discussions />}/>
           <Route path='/createpost' element={<CreatePost />}/>
           <Route path='/news' element={<News />}/>
