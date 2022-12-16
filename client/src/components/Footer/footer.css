@@ -29,6 +29,10 @@
     text-decoration: none;
 }
 
+.developers {
+    text-align: center;
+}
+
 #license-credit, #image-credit {
     color: white;
     margin: 0px;
