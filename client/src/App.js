@@ -75,7 +75,7 @@ function App() {
       <Router>
         <MobileMenu isOpen={isOpen} toggle={toggle}/>
         <Navbar toggle={toggle} />
-        <main>
+        <main id="background">
         <Routes>
           <Route path='/' element={<News />}/>
           <Route path='/signup' element={<Signup />} />
