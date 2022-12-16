@@ -46,9 +46,11 @@ const Navbar = ({ toggle, token }) => {
               <NavItem>
                 <NavLinks to="/discussions" id="nav-link">Discussions</NavLinks>
               </NavItem>
-              <NavItem>
+              {Auth.loggedIn() ? <NavItem>
+                <NavLinks to="/signup" id="nav-link" style={{ display: 'none' }}>Sign Up</NavLinks>
+              </NavItem> : <NavItem>
                 <NavLinks to="/signup" id="nav-link">Sign Up</NavLinks>
-              </NavItem>
+              </NavItem> }
             </NavMenu> 
             <NavBtn>
               {Auth.loggedIn() ? <NavBtnLink  id="nav-link">Sign Out</NavBtnLink> : <NavBtnLink onClick={() => setIsSignedIn(!isSignedIn)} to="/signin">Sign In</NavBtnLink>}
