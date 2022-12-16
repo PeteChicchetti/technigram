@@ -20,3 +20,8 @@
     --bg-v: #b1b1b1;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 40px);
+}

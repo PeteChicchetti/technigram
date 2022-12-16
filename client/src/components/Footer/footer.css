@@ -1,9 +1,14 @@
-
+.footer-contain {
+    margin-top: auto;
+}
 
 .footer {
     background-color: black;
-    padding-top: 7px;
-    
+    padding: 7px 0px 0px 0px
+}
+
+.footer-row {
+    min-height: 33px;
 }
 
 .footer-text {

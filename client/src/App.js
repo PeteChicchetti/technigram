@@ -75,6 +75,7 @@ function App() {
       <Router>
         <MobileMenu isOpen={isOpen} toggle={toggle}/>
         <Navbar toggle={toggle} />
+        <main>
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/signup' element={<Signup />} />
@@ -88,6 +89,7 @@ function App() {
           <Route path='/createpost' element={<CreatePost />}/>
           <Route path='/news' element={<News />}/>
         </Routes>
+        </main>
         <Footer />
       </Router>
     </ApolloProvider>
