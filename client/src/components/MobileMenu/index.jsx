@@ -31,7 +31,7 @@ const MobileMenu = ({ isOpen, toggle }) => {
         </Icon>
         <MobileWrapper>
             <MobileDropdown>
-                <MobileLink to="/news" onClick={toggle}>News</MobileLink>
+                <MobileLink to="/" onClick={toggle}>News</MobileLink>
                 <MobileLink to="/builds" onClick={toggle}>Builds</MobileLink>
                 <MobileLink to="/discussions" onClick={toggle}>Discussions</MobileLink>
                 {Auth.loggedIn() ? <MobileLink to="/signup" onClick={toggle} style={{ display: 'none' }}>Sign Up</MobileLink> : <MobileLink to="/signup" onClick={toggle}>Sign Up</MobileLink>}
