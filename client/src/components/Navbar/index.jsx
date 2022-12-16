@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaBars} from 'react-icons/fa';
 import { GiComputerFan } from 'react-icons/gi';
 import { 
@@ -13,8 +13,21 @@ import {
   NavBtnLink 
 } from './NavbarElements'
 
+import { setContext } from '@apollo/client/link/context';
+import Auth from '../../utils/auth';
 
-const Navbar = ({ toggle }) => {
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const Navbar = ({ toggle, token }) => {
+  const [isSignedIn, setIsSignedIn] = useState(false)
   return (
     <>
         <Nav>
@@ -38,7 +51,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
             </NavMenu> 
             <NavBtn>
-              <NavBtnLink to="/signin">Sign In</NavBtnLink>
+              {Auth.loggedIn() ? <NavBtnLink  id="nav-link">Sign Out</NavBtnLink> : <NavBtnLink onClick={() => setIsSignedIn(!isSignedIn)} to="/signin">Sign In</NavBtnLink>}
             </NavBtn>
           </NavbarContainer>  
         </Nav>
