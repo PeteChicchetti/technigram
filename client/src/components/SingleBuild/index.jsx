@@ -36,7 +36,7 @@ const SingleBuild = () => {
                     </Card>
                     {post.reactions.map((reaction) => (
                         <Card id='buildPost' key={reaction.id}>
-                            <p id='buildContent'>{reaction.comment}</p>
+                            <p id='buildComment'>{reaction.comment}</p>
                             <span id='buildInfo'>Posted by: {reaction.user.username} At: {reaction.createdAt}</span>
                         </Card>
                     ))}

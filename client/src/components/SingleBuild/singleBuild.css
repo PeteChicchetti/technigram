@@ -51,6 +51,13 @@
     color: #fff;
 }
 
+#buildContent {
+    border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
+    margin: 0px;
+    color: #fff;
+}
+
 #editIcon, #deleteIcon {
     color: #fff;
     font-size: 24px;
