@@ -22,26 +22,28 @@ const SingleBuild = () => {
         return <div>Loading...</div>;
     }
     return (
-        <Container id='buildContainer'>
-            <Row id='buildRow' className='container-fluid'>
-                <Col id='buildCol'>
+        <Container id='singleBuildContainer'>
+            <Row id='singleBuildRow' className='container-fluid'>
+                <Col id='singleBuildCol'>
 
-                    <Card id='buildPost' key={post._id}>
-                        <div id='buildHeader'>
-                            <h1 id='buildTitle'>{post.title}</h1>
+                    <Card id='singleBuildPost' key={post._id}>
+                        <div id='singleBuildHeader'>
+                            <h1 id='singleBuildTitle'>{post.title}</h1>
                         </div>
-                        <p id='buildContent'>{post.content}</p>
-                        <span ><span id='editIcon'><CiEdit /></span><span id='deleteIcon'><MdDeleteForever /></span></span>
-                        <span id='buildInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
+                        <p id='singleBuildContent'>{post.content}</p>
+                        <div style={{ display: 'flex', justifyContent: 'space-between'}} >
+                        <span><span id='editIcon'><CiEdit /></span><span id='deleteIcon'><MdDeleteForever /></span></span>
+                        <span id='singleBuildInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
+                        </div>
                     </Card>
                     {post.reactions.map((reaction) => (
-                        <Card id='buildPost' key={reaction.id}>
-                            <p id='buildComment'>{reaction.comment}</p>
-                            <span id='buildInfo'>Posted by: {reaction.user.username} At: {reaction.createdAt}</span>
+                        <Card id='singleBuildPost' key={reaction.id}>
+                            <p id='singleBuildComment'>{reaction.comment}</p>
+                            <span id='singleBuildInfo'>Posted by: {reaction.user.username} At: {reaction.createdAt}</span>
                         </Card>
                     ))}
-                    <Card id='buildPostBtn'>
-                        <Link id='buildText' to="/createpost"><GrAdd /> Comment</Link>
+                    <Card id='addCommentBtn'>
+                        <Link id='commentText' to="/createpost"><GrAdd /> Comment</Link>
                     </Card>
                 </Col>
             </Row>

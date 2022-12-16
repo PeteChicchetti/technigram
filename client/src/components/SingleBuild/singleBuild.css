@@ -1,25 +1,62 @@
-#buildContainer {
+#singleBuildContainer {
     margin-top: 80px;
     padding: 0px;
 }
 
-#buildRow {
+#singleBuildRow {
     margin: auto;
     padding: 0px;
 }
 
-#buildCol {
+#singleBuildCol {
     margin: auto;
     padding: 1rem;
     max-width: 900px;
 }
 
-#buildPostBtn {
-    background-color: #15cdfc;
-    margin-bottom: 1rem;
+#singleBuildPost {
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: #292727;
 }
 
-#buildText {
+#singleBuildHeader {
+    padding-bottom: 10px;
+}
+
+#singleBuildTitle {
+    margin: 0px;
+    color: #fff;
+}
+
+#singleBuildContent {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
+    margin: 0px;
+    color: #fff;
+    min-height: 150px;
+}
+
+#singleBuildComment {
+    border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
+    margin: 0px;
+    color: #fff;
+}
+
+#singleBuildInfo {
+    padding-top: 10px;
+    text-align: right;
+    color: #fff;
+}
+
+#addCommentBtn {
+    background-color: #15cdfc;
+    margin: 1rem 0;
+}
+
+#commentText {
     padding: 3px 3px 5px 3px;
     text-decoration: none;
     font-size: 20px;
@@ -27,45 +64,15 @@
     background-color: #15cdfc;
 }
 
-#buildPost {
-    margin-top: 1rem;
-    padding: 10px;
-    background-color: #292727;
-}
 
-#buildHeader {
-    padding-bottom: 10px;
-    
-}
-
-#buildTitle {
-    margin: 0px;
-    color: #fff;
-}
-
-#buildContent {
-    border-top: 1px solid #15cdfc;
-    border-bottom: 1px solid #15cdfc;
-    padding: 10px 0px;
-    margin: 0px;
-    color: #fff;
-}
-
-#buildContent {
-    border-bottom: 1px solid #15cdfc;
-    padding: 10px 0px;
-    margin: 0px;
-    color: #fff;
-}
 
 #editIcon, #deleteIcon {
     color: #fff;
     font-size: 24px;
     margin-right: 8px;
+    cursor: pointer;
 }
 
-#buildInfo {
-    padding-top: 10px;
-    text-align: right;
-    color: #fff;
+#editIcon:hover, #deleteIcon:hover {
+    color: #15cdfc;
 }

@@ -33,15 +33,18 @@
     background-color: #292727;
 }
 
-#buildHeader {
-    padding-bottom: 10px;
-    
+#buildLink {
+    text-decoration: none;
 }
 
-#buildTitle {
+#buildHeader {
+    padding-bottom: 10px;
+}
+
+#buildTitle  {
     margin: 0px;
     color: #fff;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 #buildContent {

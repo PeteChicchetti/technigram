@@ -25,16 +25,13 @@ const Build = () => {
             ) : (
               posts.map((post) => (
                 <Card id='buildPost' key={post._id}>
+                  <Link id='buildLink'
+                    to={`/builds/${post._id}`}>
                   <div id='buildHeader'>
                     <h1 id='buildTitle'>{post.title}</h1>
                   </div>
                   <p id='buildContent'>{post.content}</p>
-                  <span id='buildInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
-                  <Link
-                    className="btn btn-block btn-squared btn-light text-dark"
-                    to={`/builds/${post._id}`}
-                  >
-                    View Post
+                  <div id='buildInfo'>Posted by: {post.user.username} At: {post.createdAt}</div>
                   </Link>
                 </Card>
               ))
