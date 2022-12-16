@@ -27,7 +27,7 @@ main {
 }
 
 #background {
-    background-image: url("../../assets/images/blue-background.jpg");
+    background-image: url("../../assets/images/geolight.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
