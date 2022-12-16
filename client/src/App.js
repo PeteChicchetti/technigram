@@ -14,10 +14,8 @@ import Auth from './utils/auth';
 
 import Navbar from './components/Navbar';
 import MobileMenu from './components/MobileMenu';
-import Landing from './pages/Landing';
 import Signup from './components/SignUp/index';
 import Signin from './components/SignIn/index';
-import Dashboard from './pages/Dashboard';
 import Footer from './components/Footer';
 import Builds from './components/Builds/index';
 import Discussions from './components/Discussions/index';
@@ -77,17 +75,16 @@ function App() {
         <Navbar toggle={toggle} />
         <main>
         <Routes>
-          <Route path='/' element={<Landing />} />
+          <Route path='/' element={<News />}/>
           <Route path='/signup' element={<Signup />} />
           <Route path='/signin' element={<Signin />} />
           <Route
             path='dashboard/:userId'
-            element={Auth.loggedIn() ? <Dashboard /> : <ProtectRoute />}
+            element={Auth.loggedIn() ? <News /> : <ProtectRoute />}
           />
           <Route path='/builds' element={<Builds />}/>
           <Route path='/discussions' element={<Discussions />}/>
           <Route path='/createpost' element={<CreatePost />}/>
-          <Route path='/news' element={<News />}/>
         </Routes>
         </main>
         <Footer />
