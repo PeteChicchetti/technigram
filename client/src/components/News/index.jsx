@@ -12,8 +12,23 @@ fetch(req)
 })
 .then(function(data) {
   console.log(data);
-  
-  
+  return (
+    <Container id='newsContainer'>
+      <Row id='newsRow' className='container-fluid'>
+        <Col id='newsCol'>
+            <Col>
+                <Card id='newsPost'>
+                  <div id='newsHeader'>
+                    <h1 id='newsTitle'></h1> 
+                  </div>
+                  <p id='newsContent'></p>
+                  <span id='newsInfo'>Posted by:  At: </span>
+                </Card>
+            </Col>
+        </Col>
+      </Row>
+    </Container>
+  )
 })
 .catch(function(error) {
   console.error("There was an error parsing the response as JSON: " + error);
