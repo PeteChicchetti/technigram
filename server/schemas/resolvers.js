@@ -113,25 +113,23 @@ const resolvers = {
     },
     //////////UPDATES//////////
     ///UPDATE POST///
-    /*
-    updatePost: async (parent, { postid }) => {
+    updatePost: async (parent, { postid, title, content }) => {
       const updatedPost = await Post.findOneAndUpdate(
         {_id: postid},
-        {$pull:{reactions: deletedReaction._id}},
+        {$set:{title: title, content: content}},
         {new: true}
         );
       return { updatedPost };
     },
     ///UPDATE REACTION///
-    updateReaction: async (parent, { reactionid, postid }) => {
-      const deletedReaction = await Reaction.findOneAndDelete({ _id: reactionid });
-      const updatedReaction = await Post.findOneAndUpdate(
-        {_id: postid},
-        {$pull:{reactions: deletedReaction._id}},
+    updateReaction: async (parent, { reactionid, comment }) => {
+      const updatedReaction = await Reaction.findOneAndUpdate(
+        {_id: reactionid},
+        {$set:{comment: comment}},
         {new: true}
         );
-      return { deletedReaction, updatedReaction };
-    },*/
+      return { updatedReaction };
+    },
   }
 };
 

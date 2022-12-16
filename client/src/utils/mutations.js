@@ -44,11 +44,18 @@ mutation AddPost($title: String!, $content: String!) {
 `;
 ///TODO: MAKE SERVER SIDE///
 export const UPDATE_POST = gql`
-  mutation updatePost($postId: String!, $newTitle: String, $newContent: String) {
-    updatePost(postId: $postId, newTitle: $newTitle, newContent: $newContent) {
-    _id
+  mutation Mutation($postid: ID!, $title: String, $content: String) {
+  updatePost(postid: $postid, title: $title, content: $content) {
     title
     content
+    createdAt
+    _id
+    user {
+      _id
+    }
+    reactions {
+      _id
+    }
   }
 }
 `;
@@ -75,9 +82,14 @@ mutation Mutation($comment: String!, $postId: ID!) {
 `;
 ///TODO: MAKE SERVER SIDE///
 export const UPDATE_REACTION = gql`
-  mutation updateReaction($reactionId: String!, $newComment: String) {
-    updateReaction(reactionId: $reactionId, newComment: $newComment) {
+mutation Mutation($reactionid: ID!, $comment: String) {
+  updateReaction(reactionid: $reactionid, comment: $comment) {
+    _id
     comment
+    createdAt
+    user {
+      _id
+    }
   }
 }
 `;

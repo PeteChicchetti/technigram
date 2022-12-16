@@ -49,6 +49,8 @@ const typeDefs = gql`
     deletePost(postid: ID!): Post
     deleteReaction(reactionid: ID!, postid: ID!): Reaction
 
+    updatePost(postid: ID!, title:String, content:String): Post
+    updateReaction(reactionid: ID!, comment:String): Reaction
 
   }
 `;
