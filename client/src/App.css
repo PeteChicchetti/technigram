@@ -10,7 +10,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
-
+    
 }
 
 :root {
@@ -19,3 +19,4 @@
     --bg: #8A8A8A;
     --bg-v: #b1b1b1;
 }
+

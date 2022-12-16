@@ -1,19 +1,17 @@
 import React from 'react'
 import { Container, Row, Col, Card } from "react-bootstrap";
 
-
 const url = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=9ebfdc0cfd8f4c588075e86b55ffc660`;
 
 var req = new Request(url);
 fetch(req)
     .then(function(response) {
-        // Return the JSON data from the API response
         return response.json();
     })
     .then(function(data) {
-        // Log the actual data from the API response
         console.log(data);
     });
+
 
 
 const News = () => {
