@@ -15,17 +15,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
+
 
 .footer-text h3 {
     font-size: 14px;
     color: white;
-    text-align: center;
 }
 
 .footer-text a {
     color: #15cdfc;
     text-decoration: none;
+}
+
+#license-credit, #image-credit {
+    color: white;
+    margin: 0px;
 }
 
 .footer-text a:hover{
@@ -36,4 +42,9 @@
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.github-header {
+    margin-top: 0.5rem;
 }
