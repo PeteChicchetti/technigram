@@ -39,10 +39,11 @@ const News = () => {
                   <Card id='newsPost' key={index}>
                     <div id='newsHeader'>
                       <a id='newsTitle' href={result.url} target='_blank'>{result.title}</a>
+                      <span id='newsSource'> Source: {result.source.name}</span>
                     </div>
                     <img src={result.urlToImage} className='newsImage'></img>
                     <p id='newsContent'>{result.description}</p>
-                    <span id='newsInfo'>Author: {result.author}, Source: {result.source.name}</span>
+                    <span id='newsInfo'>Author: {result.author}</span>
                   </Card>
                 )
               })}

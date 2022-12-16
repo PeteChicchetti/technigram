@@ -41,11 +41,17 @@
     padding: 10px 0px;
     margin: 0px;
     color: #fff;
-    min-height: 150px;
+    min-height: 50px;
 }
 
 #newsInfo {
     padding-top: 10px;
     text-align: right;
     color: #fff;
+}
+
+#newsSource {
+    color: white;
+    display: flex;
+    justify-content: right;
 }
