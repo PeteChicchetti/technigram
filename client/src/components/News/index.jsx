@@ -32,13 +32,13 @@ return (
   <>
   {results.map((result, index) => {
     return (
-      <Container id='newsContainer' key={index} href={result.url} target='__blank'>
-    <Row id='newsRow' className='container-fluid'>
+      <Container id='newsContainer' key={index} >
+    <Row id='newsRow' className='container-fluid' >
       <Col id='newsCol'>
           <Col>
-          <Card id='newsPost'>
+          <Card id='newsPost' >
             <div id='newsHeader'>
-              <h1 id='newsTitle'>{result.title}</h1> 
+              <a id='newsTitle' href={result.url} target='_blank'>{result.title}</a> 
             </div>
             <img src={result.urlToImage} className='newsImage'></img>
             <p id='newsContent'>{result.description}</p>
