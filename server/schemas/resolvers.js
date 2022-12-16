@@ -16,8 +16,7 @@ const resolvers = {
     },
     /// GETS ONE POST ///
     post: async (parent, { postid }) => {
-        const postData = await Post.findOne({ _id: postid }).populate({path: 'reactions', populate: {path: 'user'}}).populate({path: 'user'}).select('-__v');
-        return postData;
+      return await Post.findOne({ _id: postid }).populate({path: 'reactions', populate: {path: 'user'}}).populate({path: 'user'}).select('-__v');
     },
     /// GETS ALL POSTS ///
     posts: async () => {

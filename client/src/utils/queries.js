@@ -18,18 +18,22 @@ query Query {
 `;
 
 export const QUERY_POST = gql`
-query Query($postid: ID!) {
+query post($postid: ID!) {
   post(postid: $postid) {
+    _id
     title
     content
     createdAt
     user {
+      _id
       username
     }
     reactions {
+      _id
       comment
       createdAt
       user {
+        _id
         username
       }
     }

@@ -1,0 +1,58 @@
+#buildContainer {
+    margin-top: 80px;
+    padding: 0px;
+}
+
+#buildRow {
+    margin: auto;
+    padding: 0px;
+}
+
+#buildCol {
+    margin: auto;
+    padding: 1rem;
+    max-width: 900px;
+}
+
+#buildPostBtn {
+    background-color: #15cdfc;
+    margin-bottom: 1rem;
+}
+
+#buildText {
+    padding: 3px 3px 5px 3px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    background-color: #15cdfc;
+}
+
+#buildPost {
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: #292727;
+}
+
+#buildHeader {
+    padding-bottom: 10px;
+    
+}
+
+#buildTitle {
+    margin: 0px;
+    color: #fff;
+}
+
+#buildContent {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
+    margin: 0px;
+    color: #fff;
+}
+
+#buildInfo {
+    padding-top: 10px;
+    text-align: right;
+    color: #fff;
+}
