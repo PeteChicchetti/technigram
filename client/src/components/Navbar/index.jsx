@@ -26,7 +26,7 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
-const Navbar = ({ toggle, token }) => {
+const Navbar = ({ toggle }) => {
   const [isSignedIn, setIsSignedIn] = useState(false)
   return (
     <>
