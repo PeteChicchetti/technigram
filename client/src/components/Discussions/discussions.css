@@ -40,6 +40,7 @@
 #discTitle {
     margin: 0px;
     color: #fff;
+    font-size: 24px;
 }
 
 #discContent {
@@ -48,6 +49,7 @@
     padding: 10px 0px;
     margin: 0px;
     color: #fff;
+    min-height: 150px;
 }
 
 #discInfo {
