@@ -1,55 +1,59 @@
-import React from 'react'
+import React,{ useState, useEffect} from 'react'
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 
 const News = () => {
-  const url = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=9ebfdc0cfd8f4c588075e86b55ffc660`;
+  const url = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=6798423f8ca44d86a70f8c879be30589`;
+  const [results, setResults] = useState([])
 
-var req = new Request(url);
-fetch(req)
-.then(function(response) {
-  return response.json();
-})
-.then(function(data) {
-  console.log(data);
-  return (
-    <Container id='newsContainer'>
-      <Row id='newsRow' className='container-fluid'>
-        <Col id='newsCol'>
-            <Col>
-                <Card id='newsPost'>
-                  <div id='newsHeader'>
-                    <h1 id='newsTitle'></h1> 
-                  </div>
-                  <p id='newsContent'></p>
-                  <span id='newsInfo'>Posted by:  At: </span>
-                </Card>
-            </Col>
-        </Col>
-      </Row>
-    </Container>
-  )
-})
-.catch(function(error) {
-  console.error("There was an error parsing the response as JSON: " + error);
-});
+const getNews = () => {
+  fetch(url)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      const results = data
+      console.log(results);
+      setResults(results.articles);
+      
+    })
+    .catch(function(error) {
+      console.error("There was an error parsing the response as JSON: " + error);
+    });
+}
+
+
+useEffect(() => {
+  // var req = new Request(url);
+  getNews();
+}, [])
+
 return (
-  <Container id='newsContainer'>
+  <>
+  {results.map((result, index) => {
+    return (
+      <Container id='newsContainer' key={index} href={result.url} target='__blank'>
     <Row id='newsRow' className='container-fluid'>
       <Col id='newsCol'>
           <Col>
           <Card id='newsPost'>
             <div id='newsHeader'>
-              <h1 id='newsTitle'>Cool News Page</h1> 
+              <h1 id='newsTitle'>{result.title}</h1> 
             </div>
-            <p id='newsContent'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <span id='newsInfo'>Posted by: User At: 12:03pm</span>
+            <img src={result.urlToImage} className='newsImage'></img>
+            <p id='newsContent'>{result.description}</p>
+            <span id='newsInfo'>Author: {result.author}, Source: {result.source.name}</span>
           </Card>
 
           </Col>
       </Col>
     </Row>
   </Container>
+
+    )
+  
+  })}
+ </>
 )
 }
 

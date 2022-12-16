@@ -1,6 +1,7 @@
 #newsContainer {
     margin-top: 80px;
     padding: 0px;
+    cursor: pointer;
 }
 
 #newsRow {
@@ -36,6 +37,7 @@
     padding: 10px 0px;
     margin: 0px;
     color: #fff;
+    min-height: 150px;
 }
 
 #newsInfo {
