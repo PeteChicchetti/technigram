@@ -1,49 +1,44 @@
-#buildContainer {
+#singleBuildContainer {
     margin-top: 80px;
     padding: 0px;
 }
 
-#buildRow {
+#singleBuildRow {
     margin: auto;
     padding: 0px;
 }
 
-#buildCol {
+#singleBuildCol {
     margin: auto;
     padding: 1rem;
     max-width: 900px;
 }
 
-#buildPostBtn {
-    background-color: #15cdfc;
-    margin-bottom: 1rem;
-}
-
-#buildText {
-    padding: 3px 3px 5px 3px;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: center;
-    background-color: #15cdfc;
-}
-
-#buildPost {
+#singleBuildPost {
     margin-top: 1rem;
     padding: 10px;
     background-color: #292727;
 }
 
-#buildHeader {
+#singleBuildHeader {
     padding-bottom: 10px;
-    
 }
 
-#buildTitle {
+#singleBuildTitle {
     margin: 0px;
     color: #fff;
 }
 
-#buildContent {
+#singleBuildContent {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
+    margin: 0px;
+    color: #fff;
+    min-height: 150px;
+}
+
+#singleBuildComment {
     border-top: 1px solid #15cdfc;
     border-bottom: 1px solid #15cdfc;
     padding: 10px 0px;
@@ -51,8 +46,34 @@
     color: #fff;
 }
 
-#buildInfo {
+#singleBuildInfo {
     padding-top: 10px;
     text-align: right;
     color: #fff;
+}
+
+#addCommentBtn {
+    background-color: #15cdfc;
+    margin: 1rem 0;
+}
+
+#commentText {
+    padding: 3px 3px 5px 3px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    background-color: #15cdfc;
+}
+
+
+
+#editIcon, #deleteIcon {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+#editIcon:hover, #deleteIcon:hover {
+    color: #15cdfc;
 }
