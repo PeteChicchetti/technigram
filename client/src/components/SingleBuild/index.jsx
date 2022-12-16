@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import { GrAdd } from "react-icons/gr";
+import { CiEdit } from "react-icons/ci";
+import { MdDeleteForever } from "react-icons/md";
 
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
@@ -29,6 +31,7 @@ const SingleBuild = () => {
                             <h1 id='buildTitle'>{post.title}</h1>
                         </div>
                         <p id='buildContent'>{post.content}</p>
+                        <span ><span id='editIcon'><CiEdit /></span><span id='deleteIcon'><MdDeleteForever /></span></span>
                         <span id='buildInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
                     </Card>
                     {post.reactions.map((reaction) => (

@@ -51,6 +51,12 @@
     color: #fff;
 }
 
+#editIcon, #deleteIcon {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 8px;
+}
+
 #buildInfo {
     padding-top: 10px;
     text-align: right;
