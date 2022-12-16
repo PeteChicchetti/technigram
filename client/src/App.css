@@ -25,3 +25,11 @@ main {
     flex-direction: column;
     min-height: calc(100vh - 40px);
 }
+
+#background {
+background-image: url("../../assets/images/blue-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
