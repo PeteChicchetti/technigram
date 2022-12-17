@@ -17,7 +17,7 @@ const Build = () => {
       <Row id='buildRow' className='container-fluid'>
         <Col id='buildCol'>
           <Card id='buildPostBtn'>
-            <Link id='buildText' to="/createpost"><GrAdd /></Link>
+            <Link id='buildText' to="/createpost"><GrAdd /> Comment</Link>
           </Card>
           <Col>
             {loading ? (
@@ -31,7 +31,7 @@ const Build = () => {
                     <h1 id='buildTitle'>{post.title}</h1>
                   </div>
                   <p id='buildContent'>{post.content}</p>
-                  <div id='buildInfo'>Posted by: {post.user.username} At: {post.createdAt}</div>
+                  <div id='buildInfo'><span className='buildPostInfo'>Posted by: </span> {post.user.username} | <span className='buildPostInfo'>On: </span>{post.createdAt}</div>
                   </Link>
                 </Card>
               ))
