@@ -1,0 +1,98 @@
+#singleBuildContainer {
+    margin-top: 80px;
+    padding: 0px;
+}
+
+#singleBuildRow {
+    margin: auto;
+    padding: 0px;
+}
+
+#singleBuildCol {
+    margin: auto;
+    padding: 1rem;
+    max-width: 900px;
+}
+
+#singleBuildPost {
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: #292727;
+}
+
+#singleBuildHeader {
+    padding-bottom: 10px;
+}
+
+#singleBuildTitle {
+    margin: 0px;
+    color: #fff;
+}
+
+#editBuildTitle {
+    margin: 0px;
+    border-radius: 3px;
+    width: 100%;
+    padding-left: 5px;
+    height: 35px;
+}
+
+#singleBuildContent {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
+    margin: 0px;
+    color: #fff;
+    min-height: 150px;
+}
+
+#editBuildContent {
+    border-top: 1px solid #15cdfc;
+    border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
+    margin: 0px;
+    min-height: 150px;
+    resize: none;
+    padding: 2px 5px;
+    border-radius: 3px;
+    width: 100%;
+}
+
+#singleBuildComment {
+    border-bottom: 1px solid #15cdfc;
+    padding: 10px 0px;
+    margin: 0px;
+    color: #fff;
+}
+
+#singleBuildInfo {
+    padding-top: 10px;
+    text-align: right;
+    color: #fff;
+}
+
+#addCommentBtn {
+    background-color: #15cdfc;
+    margin: 1rem 0;
+}
+
+#commentText {
+    padding: 3px 3px 5px 3px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    background-color: #15cdfc;
+}
+
+
+
+#editIcon, #deleteIcon {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+#editIcon:hover, #deleteIcon:hover {
+    color: #15cdfc;
+}
