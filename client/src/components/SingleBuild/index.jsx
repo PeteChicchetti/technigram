@@ -81,7 +81,7 @@ const SingleBuild = () => {
                                         <button id='savePostBtn' type='submit'><span id='savePostIcon' ><BiSave /></span></button>
                                         <span id='deleteIcon' onClick={handlePostDelete}><MdDeleteForever /></span>
                                     </span>
-                                    <span id='singleBuildInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
+                                    <span id='singleBuildInfo'><span className='postInfo'>Posted by: </span> {post.user.username} | <span className='postInfo'>On: </span>{post.createdAt}</span>
                                 </div>
                             </form>
                         </Card>
