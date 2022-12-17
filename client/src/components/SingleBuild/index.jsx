@@ -93,7 +93,7 @@ const SingleBuild = () => {
                             <p id='singleBuildContent'>{post.content}</p>
                             <div style={{ display: 'flex', justifyContent: 'space-between' }} >
                                 <span><span id='editIcon' onClick={() => setEditMode(!editMode)}><CiEdit /></span><span id='deleteIcon' onClick={handlePostDelete}><MdDeleteForever /></span></span>
-                                <span id='singleBuildInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
+                                <span id='singleBuildInfo'><span className='postInfo'>Posted by: </span> {post.user.username} | <span className='postInfo'>On: </span>{post.createdAt}</span>
                             </div>
                         </Card>
 

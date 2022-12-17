@@ -71,6 +71,8 @@
     color: #fff;
 }
 
+
+
 #addCommentBtn {
     background-color: #15cdfc;
     margin: 1rem 0;
@@ -82,9 +84,8 @@
     font-size: 20px;
     text-align: center;
     background-color: #15cdfc;
+    color: black;
 }
-
-
 
 #editIcon, #deleteIcon, #savePostIcon {
     color: #fff;
