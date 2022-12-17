@@ -82,17 +82,22 @@
     font-size: 20px;
     text-align: center;
     background-color: #15cdfc;
+    color: black;
 }
 
-
-
-#editIcon, #deleteIcon {
+#editIcon, #deleteIcon, #savePostIcon {
     color: #fff;
     font-size: 24px;
     margin-right: 8px;
     cursor: pointer;
 }
 
-#editIcon:hover, #deleteIcon:hover {
+#savePostBtn {
+    background-color: transparent;
+    border: none;
+}
+
+#editIcon:hover, #deleteIcon:hover, 
+#savePostIcon:hover {
     color: #15cdfc;
 }

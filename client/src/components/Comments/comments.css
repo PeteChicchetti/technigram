@@ -86,13 +86,17 @@
 
 
 
-#editIcon, #deleteIcon {
+#editIcon, #deleteIcon, #saveIcon {
     color: #fff;
     font-size: 24px;
     margin-right: 8px;
     cursor: pointer;
 }
 
-#editIcon:hover, #deleteIcon:hover {
+#savevBtn {
+    background-color: none;
+}
+
+#editIcon:hover, #deleteIcon:hover #saveIcon {
     color: #15cdfc;
 }

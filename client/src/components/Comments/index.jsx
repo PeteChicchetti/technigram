@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card } from "react-bootstrap";
-import { Link } from 'react-router-dom';
-import { GrAdd } from "react-icons/gr";
+import { Card } from "react-bootstrap";
 import { CiEdit } from "react-icons/ci";
 import { MdDeleteForever } from "react-icons/md";
 import { BiSave } from "react-icons/bi";
