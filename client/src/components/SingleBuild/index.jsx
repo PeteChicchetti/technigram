@@ -78,7 +78,7 @@ const SingleBuild = () => {
                                     onChange={(event) => setContent(event.target.value)} />
                                 <div style={{ display: 'flex', justifyContent: 'space-between' }} >
                                     <span>
-                                        <button type='submit'><span id='editIcon' ><BiSave /></span></button>
+                                        <button id='savePostBtn' type='submit'><span id='savePostIcon' ><BiSave /></span></button>
                                         <span id='deleteIcon' onClick={handlePostDelete}><MdDeleteForever /></span>
                                     </span>
                                     <span id='singleBuildInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
