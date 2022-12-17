@@ -9,6 +9,8 @@ import { BiSave } from "react-icons/bi";
 import { useQuery, useMutation } from '@apollo/client';
 import { useParams } from 'react-router-dom';
 
+import Comments from '../Comments/index';
+
 import { QUERY_POST } from '../../utils/queries';
 import { UPDATE_POST } from '../../utils/mutations';
 import { DELETE_POST } from '../../utils/mutations';
@@ -30,7 +32,7 @@ const SingleBuild = () => {
     const [addContent, { error2 }] = useMutation(UPDATE_POST);
     const [deletePost, { error3 }] = useMutation(DELETE_POST);
 
-    const handleFormSubmit = async (event) => {
+    const handlePostSubmit = async (event) => {
         event.preventDefault();
         const contentdata = await addContent({
             variables: { postid: postid, content: content },
@@ -43,9 +45,9 @@ const SingleBuild = () => {
         setEditMode(!editMode)
         
     };
-    const handleDelete = async (event) => {
+    const handlePostDelete = async (event) => {
         event.preventDefault();
-        const titledata = await deletePost({
+        const data = await deletePost({
             variables: { postid: post._id },
         });
     };
@@ -62,7 +64,7 @@ const SingleBuild = () => {
 
                     {editMode ?
                         <Card id='singleBuildPost'>
-                            <form onSubmit={handleFormSubmit}>
+                            <form onSubmit={handlePostSubmit}>
                                 <div id='singleBuildHeader'>
                                     <input
                                         id='editBuildTitle'
@@ -77,7 +79,7 @@ const SingleBuild = () => {
                                 <div style={{ display: 'flex', justifyContent: 'space-between' }} >
                                     <span>
                                         <button type='submit'><span id='editIcon' ><BiSave /></span></button>
-                                        <span id='deleteIcon' onClick={handleDelete}><MdDeleteForever /></span>
+                                        <span id='deleteIcon' onClick={handlePostDelete}><MdDeleteForever /></span>
                                     </span>
                                     <span id='singleBuildInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
                                 </div>
@@ -90,7 +92,7 @@ const SingleBuild = () => {
                             </div>
                             <p id='singleBuildContent'>{post.content}</p>
                             <div style={{ display: 'flex', justifyContent: 'space-between' }} >
-                                <span><span id='editIcon' onClick={() => setEditMode(!editMode)}><CiEdit /></span><span id='deleteIcon' onClick={handleDelete}><MdDeleteForever /></span></span>
+                                <span><span id='editIcon' onClick={() => setEditMode(!editMode)}><CiEdit /></span><span id='deleteIcon' onClick={handlePostDelete}><MdDeleteForever /></span></span>
                                 <span id='singleBuildInfo'>Posted by: {post.user.username} At: {post.createdAt}</span>
                             </div>
                         </Card>
@@ -98,10 +100,8 @@ const SingleBuild = () => {
                     }
 
                     {post.reactions.map((reaction) => (
-                        <Card id='singleBuildPost' key={reaction._id}>
-                            <p id='singleBuildComment'>{reaction.comment}</p>
-                            <span id='singleBuildInfo'>Posted by: {reaction.user.username} At: {reaction.createdAt}</span>
-                        </Card>
+                        <Comments reaction={reaction} key={reaction._id} post={post._id}>
+                        </Comments>
                     ))}
                     <Card id='addCommentBtn'>
                         <Link id='commentText' to="/createpost"><GrAdd /> Comment</Link>
