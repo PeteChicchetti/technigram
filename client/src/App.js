@@ -37,6 +37,7 @@ import './components/SingleBuild/singleBuild.css';
 import './components/Discussions/discussions.css';
 import './components/News/news.css';
 import './components/CreatePost/createPost.css';
+import './components/Comments/comments.css';
 
 
 const httpLink = createHttpLink({
