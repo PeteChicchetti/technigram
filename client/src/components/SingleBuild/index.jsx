@@ -14,9 +14,13 @@ import Comments from '../Comments/index';
 import { QUERY_POST } from '../../utils/queries';
 import { UPDATE_POST } from '../../utils/mutations';
 import { DELETE_POST } from '../../utils/mutations';
+import { ADD_REACTION } from '../../utils/mutations';
 
 const SingleBuild = () => {
     const [editMode, setEditMode] = useState(false)
+    const [addMode, setAddMode] = useState(false)
+
+    const [comment, setComment] = useState('');
 
     const { postid } = useParams();
     const { loading, data } = useQuery(QUERY_POST, {
@@ -31,6 +35,7 @@ const SingleBuild = () => {
     const [addTitle, { error }] = useMutation(UPDATE_POST);
     const [addContent, { error2 }] = useMutation(UPDATE_POST);
     const [deletePost, { error3 }] = useMutation(DELETE_POST);
+    const [addReaction, { error4 }] = useMutation(ADD_REACTION);
 
     const handlePostSubmit = async (event) => {
         event.preventDefault();
@@ -43,13 +48,23 @@ const SingleBuild = () => {
         setTitle(post.title);
         setContent(post.content);
         setEditMode(!editMode)
-        
+
     };
     const handlePostDelete = async (event) => {
         event.preventDefault();
         const data = await deletePost({
             variables: { postid: post._id },
         });
+    };
+
+    const handleReactionSubmit = async (event) => {
+        event.preventDefault();
+        const data = await addReaction({
+            variables: { comment: comment, postid: post._id },
+        });
+        setComment('');
+        setAddMode(!addMode)
+
     };
 
 
@@ -98,14 +113,32 @@ const SingleBuild = () => {
                         </Card>
 
                     }
+                    {addMode ?
+                        <Card id='singleBuildPost'>
+                            <form onSubmit={handleReactionSubmit}>
+                                <input
+                                    id='singleBuildComment'
+                                    value={comment}
+                                    onChange={(event) => setComment(event.target.value)}
+                                />
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }} >
+                                    <span>
+                                        <button type='submit'><span id='addIcon' ><BiSave /></span></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </Card>
+                        :
+                        <Card id='addCommentBtn'>
+                            <span id='commentText' onClick={() => setAddMode(!editMode)}><GrAdd /> Comment</span>
+                        </Card>
+                    }
 
                     {post.reactions.map((reaction) => (
                         <Comments reaction={reaction} key={reaction._id} post={post._id}>
                         </Comments>
                     ))}
-                    <Card id='addCommentBtn'>
-                        <Link id='commentText' to="/createpost"><GrAdd /> Comment</Link>
-                    </Card>
+
                 </Col>
             </Row>
         </Container>

@@ -60,8 +60,8 @@ export const DELETE_POST = gql`
 `;
 /////////REACTIONS/////////
 export const ADD_REACTION = gql`
-mutation Mutation($comment: String!, $postId: ID!) {
-  addReaction(comment: $comment, postId: $postId) {
+mutation Mutation($comment: String!, $postid: ID!) {
+  addReaction(comment: $comment, postid: $postid) {
     _id
     comment
     createdAt
