@@ -51,7 +51,7 @@ const Comments = ({ reaction, post }) => {
                             <button type='submit'><span id='editIcon' ><BiSave /></span></button>
                             <span id='deleteIcon' onClick={handleReactionDelete}><MdDeleteForever /></span>
                         </span>
-                        <span id='singleBuildInfo'>Posted by: {reaction.user.username} At: {reaction.createdAt}</span>
+                        <span id='singleBuildInfo'><span className='postInfo'>Posted by: </span> {post.user.username} | <span className='postInfo'>On: </span>{post.createdAt}</span>
                     </div>
                 </form>
             </Card>
@@ -63,7 +63,7 @@ const Comments = ({ reaction, post }) => {
                         <span id='editIcon' onClick={() => setEditMode(!editMode)}><CiEdit /></span>
                         <span id='deleteIcon' onClick={handleReactionDelete}><MdDeleteForever /></span>
                     </span>
-                    <span id='singleBuildInfo'>Posted by: {reaction.user.username} At: {reaction.createdAt}</span>
+                    <span id='singleBuildInfo'><span className='postInfo'>Posted by: </span> {reaction.user.username} | <span className='postInfo'>On: </span>{reaction.createdAt}</span>
                 </div>
             </Card>
         }
