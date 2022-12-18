@@ -123,7 +123,7 @@ const SingleBuild = () => {
                                 />
                                 <div style={{ display: 'flex', justifyContent: 'space-between' }} >
                                     <span>
-                                        <button type='submit'><span id='addIcon' ><BiSave /></span></button>
+                                        <button className='saveCommentBtn' type='submit'><span id='addIcon' ><BiSave /></span></button>
                                     </span>
                                 </div>
                             </form>

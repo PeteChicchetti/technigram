@@ -85,14 +85,14 @@
     color: black;
 }
 
-#editIcon, #deleteIcon, #savePostIcon {
+#editIcon, #deleteIcon, #savePostIcon, #addIcon {
     color: #fff;
     font-size: 24px;
     margin-right: 8px;
     cursor: pointer;
 }
 
-#savePostBtn {
+#savePostBtn, .saveCommentBtn {
     background-color: transparent;
     border: none;
 }
