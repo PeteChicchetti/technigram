@@ -24,7 +24,7 @@ const News = () => {
 
 
   useEffect(() => {
-    getNews();
+    // getNews();
   }, [])
 
   return (
