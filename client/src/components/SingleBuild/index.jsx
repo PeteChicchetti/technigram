@@ -116,14 +116,15 @@ const SingleBuild = () => {
                     {addMode ?
                         <Card id='singleBuildPost'>
                             <form onSubmit={handleReactionSubmit}>
-                                <input
+                                <textarea
+                                    rows="4"
                                     id='singleBuildComment'
                                     value={comment}
                                     onChange={(event) => setComment(event.target.value)}
                                 />
                                 <div style={{ display: 'flex', justifyContent: 'space-between' }} >
                                     <span>
-                                        <button type='submit'><span id='addIcon' ><BiSave /></span></button>
+                                        <button className='saveCommentBtn' type='submit'><span id='addIcon' ><BiSave /></span></button>
                                     </span>
                                 </div>
                             </form>
