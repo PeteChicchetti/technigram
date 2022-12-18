@@ -42,7 +42,7 @@ const Comments = ({ reaction, post }) => {
             <Card id='commentBuildPost'>
                 <form onSubmit={handleReactionSubmit}>
                     <input
-                        id='singleBuildEditComment'
+                        id='editCommentPost'
                         value={comment}
                         onChange={(event) => setComment(event.target.value)}
                     />
@@ -57,7 +57,7 @@ const Comments = ({ reaction, post }) => {
             </Card>
             :
             <Card id='commentBuildPost'>
-                <p id='singleBuildComment'>{reaction.comment}</p>
+                <p id='commentPost'>{reaction.comment}</p>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }} >
                     <span>
                         <span id='editCommentIcon' onClick={() => setEditMode(!editMode)}><CiEdit /></span>
