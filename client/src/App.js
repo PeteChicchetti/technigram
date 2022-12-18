@@ -82,7 +82,7 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/signin' element={<Signin />} />
           <Route
-            path='dashboard/:userId'
+            path='/'
             element={Auth.loggedIn() ? <News /> : <ProtectRoute />}
           />
           <Route path='/builds' element={<Builds />}/>
