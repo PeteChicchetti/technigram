@@ -59,10 +59,13 @@
 }
 
 #singleBuildComment {
-    border-bottom: 1px solid #15cdfc;
-    padding: 10px 0px;
+    padding: 5px;
     margin: 0px;
-    color: #fff;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
 }
 
 #singleBuildInfo {

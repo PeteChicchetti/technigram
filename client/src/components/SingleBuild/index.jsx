@@ -116,7 +116,8 @@ const SingleBuild = () => {
                     {addMode ?
                         <Card id='singleBuildPost'>
                             <form onSubmit={handleReactionSubmit}>
-                                <input
+                                <textarea
+                                    rows="4"
                                     id='singleBuildComment'
                                     value={comment}
                                     onChange={(event) => setComment(event.target.value)}
