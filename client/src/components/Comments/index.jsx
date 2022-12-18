@@ -41,7 +41,8 @@ const Comments = ({ reaction, post }) => {
         {editMode ?
             <Card id='commentBuildPost'>
                 <form onSubmit={handleReactionSubmit}>
-                    <input
+                    <textarea
+                        rows="4"
                         id='editCommentPost'
                         value={comment}
                         onChange={(event) => setComment(event.target.value)}
