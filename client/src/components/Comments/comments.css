@@ -1,71 +1,10 @@
-#singleBuildContainer {
-    margin-top: 80px;
-    padding: 0px;
-}
-
-#singleBuildRow {
-    margin: auto;
-    padding: 0px;
-}
-
-#singleBuildCol {
-    margin: auto;
-    padding: 1rem;
-    max-width: 900px;
-}
-
-#singleBuildPost {
+#commentBuildPost {
     margin-top: 1rem;
     padding: 10px;
     background-color: #292727;
 }
 
-#singleBuildHeader {
-    padding-bottom: 10px;
-}
-
-#singleBuildTitle {
-    margin: 0px;
-    color: #fff;
-}
-
-#editBuildTitle {
-    margin: 0px;
-    border-radius: 3px;
-    width: 100%;
-    padding-left: 5px;
-    height: 35px;
-}
-
-#singleBuildContent {
-    border-top: 1px solid #15cdfc;
-    border-bottom: 1px solid #15cdfc;
-    padding: 10px 0px;
-    margin: 0px;
-    color: #fff;
-    min-height: 150px;
-}
-
-#editBuildContent {
-    border-top: 1px solid #15cdfc;
-    border-bottom: 1px solid #15cdfc;
-    padding: 10px 0px;
-    margin: 0px;
-    min-height: 150px;
-    resize: none;
-    padding: 2px 5px;
-    border-radius: 3px;
-    width: 100%;
-}
-
-#singleBuildComment {
-    border-bottom: 1px solid #15cdfc;
-    padding: 10px 0px;
-    margin: 0px;
-    color: #fff;
-}
-
-#singleBuildInfo {
+#commentBuildInfo {
     padding-top: 10px;
     text-align: right;
     color: #fff;
@@ -84,19 +23,36 @@
     background-color: #15cdfc;
 }
 
+#commentPost {
+    border-bottom: 1px solid #15cdfc;
+    padding-bottom: 10px;
+    margin: 0px;
+    color: #fff;
+    width: 100%;
+}
 
+#editCommentPost {
+    border-radius: 3px;
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+}
 
-#editIcon, #deleteIcon, #saveIcon {
+#editCommentIcon, #deleteCommentIcon, #saveComment {
     color: #fff;
     font-size: 24px;
     margin-right: 8px;
     cursor: pointer;
 }
 
-#savevBtn {
-    background-color: none;
+#saveCommentBtn {
+    background-color: transparent;
+    border: none;
 }
 
-#editIcon:hover, #deleteIcon:hover #saveIcon {
+#editCommentIcon:hover, #deleteCommentIcon:hover, #saveComment:hover {
     color: #15cdfc;
 }

@@ -39,31 +39,32 @@ const Comments = ({ reaction, post }) => {
     return (
         <>
         {editMode ?
-            <Card id='singleBuildPost'>
+            <Card id='commentBuildPost'>
                 <form onSubmit={handleReactionSubmit}>
-                    <input
-                        id='singleBuildComment'
+                    <textarea
+                        rows="4"
+                        id='editCommentPost'
                         value={comment}
                         onChange={(event) => setComment(event.target.value)}
                     />
                     <div style={{ display: 'flex', justifyContent: 'space-between' }} >
                         <span>
-                            <button type='submit'><span id='editIcon' ><BiSave /></span></button>
-                            <span id='deleteIcon' onClick={handleReactionDelete}><MdDeleteForever /></span>
+                            <button id='saveCommentBtn' type='submit'><span id='saveComment' ><BiSave /></span></button>
+                            <span id='deleteCommentIcon' onClick={handleReactionDelete}><MdDeleteForever /></span>
                         </span>
-                        <span id='singleBuildInfo'>Posted by: {reaction.user.username} At: {reaction.createdAt}</span>
+                        <span id='commentBuildInfo'><span className='commentInfo'>Posted by: </span> {reaction.user.username} | <span className='commentInfo'>On: </span>{reaction.createdAt}</span>
                     </div>
                 </form>
             </Card>
             :
-            <Card id='singleBuildPost'>
-                <p id='singleBuildComment'>{reaction.comment}</p>
+            <Card id='commentBuildPost'>
+                <p id='commentPost'>{reaction.comment}</p>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }} >
                     <span>
-                        <span id='editIcon' onClick={() => setEditMode(!editMode)}><CiEdit /></span>
-                        <span id='deleteIcon' onClick={handleReactionDelete}><MdDeleteForever /></span>
+                        <span id='editCommentIcon' onClick={() => setEditMode(!editMode)}><CiEdit /></span>
+                        <span id='deleteCommentIcon' onClick={handleReactionDelete}><MdDeleteForever /></span>
                     </span>
-                    <span id='singleBuildInfo'>Posted by: {reaction.user.username} At: {reaction.createdAt}</span>
+                    <span id='commentBuildInfo'><span className='commentInfo'>Posted by: </span> {reaction.user.username} | <span className='commentInfo'>On: </span>{reaction.createdAt}</span>
                 </div>
             </Card>
         }
