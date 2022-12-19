@@ -22,6 +22,7 @@ const News = () => {
   //       console.error("There was an error parsing the response as JSON: " + error);
   //     });
   // }
+  const getNews = () => {
 
   const options = {
     method: 'GET',
@@ -44,9 +45,10 @@ const News = () => {
     .catch(function (error) {
       console.error('There was an error parsing the response as JSON: ' + error);
     });
+  }
 
   useEffect(() => {
-    options();
+    getNews();
   }, [])
 
   return (
@@ -61,11 +63,11 @@ const News = () => {
                   <Card id='newsPost' key={index}>
                     <div id='newsHeader'>
                       <a id='newsTitle' href={result.url} target='_blank'>{result.title}</a>
-                      <span id='newsSource'> Source: {result.source.name}</span>
+                      
                     </div>
                     <img src={result.urlToImage} className='newsImage'></img>
                     <p id='newsContent'>{result.description}</p>
-                    <span id='newsInfo'>Author: {result.author}</span>
+                    <a id='newsSource' href={result.publisher.url} target='_blank'> Source: {result.publisher.name}</a>
                   </Card>
                 )
               })}
