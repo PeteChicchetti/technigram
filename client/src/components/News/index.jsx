@@ -4,7 +4,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 
 
 const News = () => {
-  const url = 'https://news-api14.p.rapidapi.com/top-headlines?country=us&language=en&pageSize=10&category=technology';
+  const url = 'https://bing-news-search1.p.rapidapi.com/news?count=100&category=Technology&cc=US&setLang=EN&safeSearch=Off&textFormat=Raw';
   const [results, setResults] = useState([])
 
   // const getNews = () => {
@@ -24,13 +24,14 @@ const News = () => {
   // }
   const getNews = () => {
 
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': '7e06928a00msh707867a2a351098p112c16jsn62fbfdebcd93',
-      'X-RapidAPI-Host': 'news-api14.p.rapidapi.com'
-    }
-  };
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-BingApis-SDK': 'true',
+        'X-RapidAPI-Key': '7e06928a00msh707867a2a351098p112c16jsn62fbfdebcd93',
+        'X-RapidAPI-Host': 'bing-news-search1.p.rapidapi.com'
+      }
+    };
   
   
   fetch(url, options)
@@ -40,7 +41,7 @@ const News = () => {
     .then(function (data) {
       const results = data
       console.log(results);
-      setResults(results.articles);
+      setResults(results.value);
     })
     .catch(function (error) {
       console.error('There was an error parsing the response as JSON: ' + error);
@@ -62,12 +63,12 @@ const News = () => {
 
                   <Card id='newsPost' key={index}>
                     <div id='newsHeader'>
-                      <a id='newsTitle' href={result.url} target='_blank'>{result.title}</a>
+                      <a id='newsTitle' href={result.url} target='_blank'>{result.name}</a>
                       
                     </div>
-                    <img src={result.urlToImage} className='newsImage'></img>
+                    <img src={result.contentUrl} className='newsImage'></img>
                     <p id='newsContent'>{result.description}</p>
-                    <a id='newsSource' href={result.publisher.url} target='_blank'> Source: {result.publisher.name}</a>
+                    <a id='newsSource'> Source: {result.provider[0].name}</a>
                   </Card>
                 )
               })}
