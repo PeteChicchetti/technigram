@@ -2,29 +2,51 @@ import React, { useState, useEffect } from 'react'
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 
+
 const News = () => {
-  const url = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=6798423f8ca44d86a70f8c879be30589`;
+  const url = 'https://news-api14.p.rapidapi.com/top-headlines?country=us&language=en&pageSize=10&category=technology';
   const [results, setResults] = useState([])
 
-  const getNews = () => {
-    fetch(url)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        const results = data
-        console.log(results);
-        setResults(results.articles);
+  // const getNews = () => {
+  //   fetch(url)
+  //     .then(function (response) {
+  //       return response.json();
+  //     })
+  //     .then(function (data) {
+  //       const results = data
+  //       console.log(results);
+  //       setResults(results.articles);
 
-      })
-      .catch(function (error) {
-        console.error("There was an error parsing the response as JSON: " + error);
-      });
-  }
+  //     })
+  //     .catch(function (error) {
+  //       console.error("There was an error parsing the response as JSON: " + error);
+  //     });
+  // }
 
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '7e06928a00msh707867a2a351098p112c16jsn62fbfdebcd93',
+      'X-RapidAPI-Host': 'news-api14.p.rapidapi.com'
+    }
+  };
+  
+  
+  fetch(url, options)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      const results = data
+      console.log(results);
+      setResults(results.articles);
+    })
+    .catch(function (error) {
+      console.error('There was an error parsing the response as JSON: ' + error);
+    });
 
   useEffect(() => {
-    getNews();
+    options();
   }, [])
 
   return (
