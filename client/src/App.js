@@ -37,6 +37,7 @@ import './components/SingleBuild/singleBuild.css';
 import './components/Discussions/discussions.css';
 import './components/News/news.css';
 import './components/CreatePost/createPost.css';
+import './components/Comments/comments.css';
 
 
 const httpLink = createHttpLink({
@@ -81,7 +82,7 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/signin' element={<Signin />} />
           <Route
-            path='dashboard/:userId'
+            path='/'
             element={Auth.loggedIn() ? <News /> : <ProtectRoute />}
           />
           <Route path='/builds' element={<Builds />}/>

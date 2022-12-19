@@ -46,31 +46,22 @@ mutation AddPost($title: String!, $content: String!) {
 export const UPDATE_POST = gql`
   mutation Mutation($postid: ID!, $title: String, $content: String) {
   updatePost(postid: $postid, title: $title, content: $content) {
-    title
-    content
     createdAt
-    _id
-    user {
-      _id
-    }
-    reactions {
-      _id
-    }
   }
 }
 `;
 
 export const DELETE_POST = gql`
-  mutation deletePost($postid: String!) {
+  mutation deletePost($postid: ID!) {
     deletePost(postid: $postid) {
-    _id
+      createdAt
   }
 }
 `;
 /////////REACTIONS/////////
 export const ADD_REACTION = gql`
-mutation Mutation($comment: String!, $postId: ID!) {
-  addReaction(comment: $comment, postId: $postId) {
+mutation Mutation($comment: String!, $postid: ID!) {
+  addReaction(comment: $comment, postid: $postid) {
     _id
     comment
     createdAt
@@ -80,23 +71,17 @@ mutation Mutation($comment: String!, $postId: ID!) {
   }
 }
 `;
-///TODO: MAKE SERVER SIDE///
 export const UPDATE_REACTION = gql`
 mutation Mutation($reactionid: ID!, $comment: String) {
   updateReaction(reactionid: $reactionid, comment: $comment) {
-    _id
-    comment
     createdAt
-    user {
-      _id
-    }
   }
 }
 `;
 export const DELETE_REACTION = gql`
-  mutation deleteReaction($reactionid: String!, $postid: ID!) {
+  mutation deleteReaction($reactionid: ID!, $postid: ID!) {
   deleteReaction(reactionid: $reactionid, postid: $postid) {
-    _id
+    createdAt
   }
 }
 `;

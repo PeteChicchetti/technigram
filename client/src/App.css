@@ -23,11 +23,11 @@
 main {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 40px);
+    min-height: calc(100vh - 55px);
 }
 
 #background {
-    background-image: url("../../assets/images/geolight.png");
+    background-image: url("../../assets/images/blue-background-symmetrical.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
